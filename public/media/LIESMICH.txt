@@ -9,8 +9,8 @@ Website sie automatisch. Fehlt sie, zeigt die Seite ihre gezeichnete Variante.
   therapie.jpg           Bild im Bereich Psychotherapie (Hochformat 4:5)
   hypnose.jpg            Bild im Bereich Hypnose (Hochformat 4:5)
   portrait.jpg           Porträtfoto für "Über mich" (Hochformat 4:5)
-  standort-wien.jpg      Foto des Standorts Wien im Kopfbereich (Hochformat 4:5)
-  standort-noe.jpg       Foto des Standorts Eggendorf im Thale im Kopfbereich (Hochformat 4:5)
+  standort-wien.webp     Foto des Standorts Wien im Kopfbereich (Hochformat 4:5)
+  standort-noe.webp      Foto des Standorts Eggendorf im Thale im Kopfbereich (Hochformat 4:5)
   orf-nikotinentzug.mp4  ORF-Beitrag; blendet den Bereich "Medien" ein
   orf-nikotinentzug.jpg  Standbild zum ORF-Beitrag
 

@@ -14,7 +14,7 @@ export const mediaFiles = {
   hypnose: "hypnose.jpg",
   portrait: "portrait.jpg",
   standortWien: "standort-wien.webp",
-  standortNoe: "standort-noe.jpg",
+  standortNoe: "standort-noe.webp",
   orfVideo: "orf-nikotinentzug.mp4",
   orfPoster: "orf-nikotinentzug.jpg",
 } as const;
