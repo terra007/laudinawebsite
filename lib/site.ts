@@ -71,131 +71,110 @@ export type Focus = {
   /** Kleinere Zeile direkt unter dem Titel. */
   subtitle?: string;
   icon: string;
-  /** Ausführlicher Text, öffnet sich im Dialog. */
-  body?: { heading?: string; text: string }[];
-  /** Kurzer Zusatz für Schwerpunkte ohne ausführlichen Text. */
-  note?: string;
+  /** Kurzer Text, immer sichtbar. */
+  text: string;
+  /** Zweiter Absatz, etwa zum Thema der Unterzeile. */
+  extra?: string;
 };
 
+/*
+ * Kurztexte in eigenen Worten, fachlich abgestimmt auf Informationen des
+ * Österreichischen Bundesverbands für Psychotherapie (ÖBVP), der ÖGK und des
+ * Sozialministeriums (Informationen zur therapeutischen Hypnose).
+ */
 export const focusAreas: Focus[] = [
   {
     id: "trauma",
     title: "Traumatherapie",
     subtitle: "Transgenerationale Weitergabe von Traumata",
     icon: "Layers",
-    body: [
-      {
-        text: "Psychische Traumatisierungen sind die Folge von extrem belastenden Ereignissen oder übergriffigen bzw. gewalttätigen Beziehungen, bei denen die Betroffenen massiven psychischen oder körperlichen Bedrohungen ausgesetzt waren.",
-      },
-      {
-        text: "Solche Ereignisse können extremen Stress und Gefühle der Hilflosigkeit und des Entsetzens auslösen. Dies kann der Fall sein, wenn jemand selbst von dem Ereignis betroffen ist oder wenn er – etwa als Augenzeuge – miterlebt, wie andere Opfer dieses Ereignisses werden.",
-      },
-      {
-        heading: "Transgenerationale Weitergabe von Traumata",
-        text: "Unter transgenerationalem Trauma versteht man die meist unbewusste Weitergabe traumatischer Erfahrungen an nachfolgende Generationen oder Gesellschaften. Nachfahren leiden an Traumafolge-Symptomen, ohne dass sie das Trauma selbst erlebt haben.",
-      },
-    ],
+    text: "Gewalt, Unfälle, Verluste oder andere extrem belastende Erlebnisse können lange nachwirken, etwa als Ängste, Albträume oder Rückzug. In der Traumatherapie geht es zuerst um Stabilität und Sicherheit, dann um die behutsame Verarbeitung des Erlebten.",
+    extra:
+      "Traumatische Erfahrungen können auch unbewusst an nachfolgende Generationen weitergegeben werden. Nachkommen leiden dann an Traumafolgen, ohne das Trauma selbst erlebt zu haben.",
   },
   {
     id: "psychoonkologie",
     title: "Psychoonkologie",
     icon: "Ribbon",
-    body: [
-      {
-        text: "Psychoonkologie bezeichnet die psychotherapeutische Begleitung von Menschen mit einer Krebserkrankung und ihren Angehörigen. Sie unterstützt bei der Verarbeitung der Diagnose, dem Umgang mit emotionalen Belastungen, Krankheitsfolgen und psychosozialen Herausforderungen in allen Phasen der Erkrankung.",
-      },
-    ],
+    text: "Begleitung für Menschen mit einer Krebserkrankung und ihre Angehörigen: beim Verarbeiten der Diagnose, im Umgang mit Angst und Belastung und in allen Phasen der Behandlung.",
   },
   {
     id: "psychosomatik",
     title: "Psychosomatik, psychosomatischer Schmerz",
     icon: "Activity",
-    body: [
-      {
-        text: "Bei psychosomatischen Erkrankungen wird Hypnose traditionell schon lange sehr erfolgreich angewendet. Denn Körper und Psyche sind untrennbar miteinander verbunden. Oftmals äußern sich psychische Konflikte in körperlichen Beschwerden.",
-      },
-      {
-        text: "Zum Beispiel: Asthma, Neurodermitis, Allergien, Tinnitus, Kopfschmerzen, Reizdarm, Verspannungen, Vaginismus u. v. m. Mittels Hypnose können die Symptome gelindert werden und/oder verschwinden sogar vollkommen.",
-      },
-    ],
+    text: "Körper und Psyche hängen eng zusammen. Zeigen sich seelische Belastungen als Schmerzen, Verspannungen, Haut- oder Verdauungsbeschwerden, kann Hypnose Symptome lindern und ihre Hintergründe verstehbar machen.",
   },
   {
     id: "sexualitaet",
     title: "Sexualität",
     icon: "Heart",
-    body: [
-      {
-        text: "In kaum einem anderen Bereich wirken sich Dysbalancen in unserem sozialen Leben so offensichtlich aus wie in unserer Sexualität. Verantwortlich dafür sind körperliche und/oder seelische Ursachen, die viel zu oft unausgesprochen, unterdrückt und damit unbehandelt bleiben.",
-      },
-      {
-        text: "Ungelöste emotionale Konflikte, Beziehungskrisen, Leistungsdruck, anerzogene sittliche oder moralische Vorstellungen, hormonelle Veränderungen, wenig oder keine Information. Das und vieles mehr kann unsere Bereitschaft zur Lustempfindung und unsere sexuelle Wahrnehmung stören, belasten oder sogar verhindern.",
-      },
-    ],
+    text: "Lustlosigkeit, Schmerzen oder Unsicherheit in der Sexualität haben oft seelische wie körperliche Ursachen und bleiben häufig unausgesprochen. In einem geschützten Rahmen finden wir neue Zugänge.",
   },
   {
     id: "adhs",
     title: "AD(H)S bei Erwachsenen",
     icon: "Orbit",
-    body: [
-      {
-        text: "Psychotherapeutische Begleitung von Erwachsenen mit ADHS zur Unterstützung im Umgang mit Aufmerksamkeitsschwierigkeiten, Impulsivität, innerer Unruhe sowie den daraus entstehenden emotionalen und psychosozialen Belastungen.",
-      },
-    ],
+    text: "Unterstützung im Umgang mit Unaufmerksamkeit, Impulsivität und innerer Unruhe sowie mit den Belastungen, die daraus im Alltag, im Beruf und in Beziehungen entstehen.",
   },
   {
     id: "depression",
     title: "Depression",
     icon: "CloudSun",
-    body: [
-      {
-        text: "Depressive Störungen sind sehr weit verbreitet und nehmen die unterschiedlichsten Formen an. Nicht immer stehen Stimmungstief, Gedankenkreisen, Antriebslosigkeit und Gedächtnis- oder Konzentrationsschwäche im Vordergrund. Manchmal dominieren auch körperliche Symptome, häufig in Form von Schmerzen.",
-      },
-      {
-        text: "Patienten lernen durch die Trancearbeit, grüblerische Gedanken besser loszulassen und sich auf gesundheitsfördernde Aktivitäten einzulassen.",
-      },
-    ],
+    text: "Niedergeschlagenheit, Antriebslosigkeit, Grübeln, manchmal auch körperliche Beschwerden: Depressionen haben viele Gesichter und sind gut behandelbar. In der Therapie lernen Sie, belastende Gedanken loszulassen und wieder Kraft zu schöpfen.",
   },
   {
     id: "angst",
     title: "Angststörungen, Panikattacken",
     icon: "HeartPulse",
-    body: [
-      {
-        text: "Angststörungen sind weit verbreitet, doch nur wenige Menschen trauen sich, darüber zu sprechen. Ist das Thema „Angst“ doch auch mit Scham behaftet, da man ungern Schwäche zeigen möchte.",
-      },
-      {
-        text: "Symptome können sein: aufsteigende Panik, Herzrasen, Enge in der Brust, Zittern, Schwindel, Übelkeit, Schweißausbrüche, lebensbedrohliche Angst.",
-      },
-      {
-        text: "Hypnose hilft bei Ängsten in besonderer Weise dadurch, dass die Übererregung und Anspannung reduziert wird und Neubewertungen im Bereich des Denkens und vor allem des Fühlens möglich werden.",
-      },
-    ],
+    text: "Herzrasen, Enge in der Brust, Schwindel oder plötzliche Panik: Angststörungen sind häufig und gut behandelbar. Hypnose hilft, Anspannung abzubauen und Ängste neu zu bewerten.",
   },
-  { id: "kinderwunsch", title: "Unerfüllter Kinderwunsch", icon: "Sprout" },
+  {
+    id: "kinderwunsch",
+    title: "Unerfüllter Kinderwunsch",
+    icon: "Sprout",
+    text: "Ein unerfüllter Kinderwunsch belastet Seele und Partnerschaft. Die Therapie gibt Raum für Hoffnung, Enttäuschung und Trauer und begleitet auch während einer Kinderwunschbehandlung.",
+  },
   {
     id: "geburt",
     title: "Schwangerschaft, hypnotherapeutische Geburtsvorbereitung",
     icon: "Baby",
+    text: "Hypnose stärkt das Vertrauen in den eigenen Körper, nimmt Ängste vor der Geburt und vermittelt Techniken zur tiefen Entspannung.",
   },
-  { id: "paartherapie", title: "Paartherapie, Beziehungstherapie", icon: "HeartHandshake" },
-  { id: "stress", title: "Stress, Burn-out", icon: "BatteryLow" },
   {
-    id: "nikotin",
-    title: "Nikotinentzug",
-    icon: "CigaretteOff",
-    note: "Der ORF hat in meiner Praxis dazu gedreht.",
+    id: "paartherapie",
+    title: "Paartherapie, Beziehungstherapie",
+    icon: "HeartHandshake",
+    text: "Wenn sich Konflikte wiederholen oder Nähe verloren gegangen ist, hilft Paartherapie, einander wieder zu verstehen, festgefahrene Muster zu erkennen und neue Wege miteinander zu finden.",
+  },
+  {
+    id: "stress",
+    title: "Stress, Burn-out",
+    icon: "BatteryLow",
+    text: "Dauerhafte Überlastung führt zu Erschöpfung, Schlafproblemen und innerer Leere. Gemeinsam schauen wir auf Ursachen und Grenzen und stärken Ihre Ressourcen.",
   },
   {
     id: "selbsterfahrung",
-    title: "Selbsterfahrung im Rahmen des Propädeutikums",
+    title: "Selbsterfahrung im Rahmen des Psychotherapeutischen Propädeutikums",
     icon: "GraduationCap",
+    text: "Die vorgeschriebene Selbsterfahrung für angehende Psychotherapeutinnen und Psychotherapeuten in Ausbildung.",
   },
-  { id: "supervision", title: "Supervision", icon: "MessagesSquare" },
+  {
+    id: "supervision",
+    title: "Supervision",
+    icon: "MessagesSquare",
+    text: "Für Fachkräfte aus Gesundheits- und Sozialberufen: Reflexion der eigenen Arbeit, schwieriger Situationen und der beruflichen Rolle.",
+  },
   {
     id: "sporthypnose",
     title: "Sporthypnose",
     icon: "Medal",
-    note: "Sportliche Leistung optimieren, Teambuilding",
+    text: "Mentales Training für Sportlerinnen und Sportler: Konzentration, Umgang mit Druck und Wettkampfangst, Leistung im entscheidenden Moment abrufen. Auch für Teambuilding.",
+  },
+  {
+    id: "nikotin",
+    title: "Nikotinentzug",
+    icon: "CigaretteOff",
+    text: "Hypnose unterstützt dabei, mit dem Rauchen aufzuhören: Sie stärkt die Motivation, hilft im Umgang mit dem Verlangen und verankert das Nichtrauchen. Der ORF hat dazu in meiner Praxis gedreht.",
   },
 ];
 

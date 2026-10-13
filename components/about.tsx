@@ -20,15 +20,7 @@ function Listing({ title, items }: { title: string; items: string[] }) {
   );
 }
 
-export function About({
-  portrait,
-  orfVideo,
-  orfPoster,
-}: {
-  portrait: string | null;
-  orfVideo: string | null;
-  orfPoster: string | null;
-}) {
+export function About({ portrait }: { portrait: string | null }) {
   return (
     <section id="ueber-mich" className="bg-kalk py-24 md:py-36">
       <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
@@ -73,24 +65,6 @@ export function About({
           </Reveal>
         </div>
       </div>
-
-      {orfVideo ? (
-        <div id="medien" className="wrap mt-24 md:mt-32">
-          <Reveal>
-            <h3 className="max-w-[26ch] font-serif text-[clamp(1.6rem,2.6vw,2.2rem)] leading-tight">
-              {about.mediaTitle}
-            </h3>
-            <video
-              className="mt-8 aspect-video w-full rounded-xl bg-moos-tief"
-              src={orfVideo}
-              poster={orfPoster ?? undefined}
-              controls
-              playsInline
-              preload="none"
-            />
-          </Reveal>
-        </div>
-      ) : null}
     </section>
   );
 }

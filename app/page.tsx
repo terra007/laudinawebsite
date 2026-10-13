@@ -30,8 +30,8 @@ export default function Home() {
         <Hero portrait={portrait} />
         <Psychotherapy image={media("therapie")} />
         <Hypnosis image={media("hypnose")} />
-        <ServicesGrid hasOrfVideo={Boolean(orfVideo)} />
-        <About portrait={portrait} orfVideo={orfVideo} orfPoster={media("orfPoster")} />
+        <ServicesGrid orfVideo={orfVideo} orfPoster={media("orfPoster")} />
+        <About portrait={portrait} />
         <PricingCards />
         <Contact />
       </main>
