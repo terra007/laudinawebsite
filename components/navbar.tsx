@@ -31,18 +31,12 @@ export function Navbar({ solid = false }: { solid?: boolean }) {
       )}
     >
       <div className="wrap flex h-[4.5rem] items-center justify-between gap-6">
-        {/* Auf der Startseite steht der Name groß im Kopfbereich; hier erscheint er erst beim Scrollen. */}
-        <Link
-          href="/"
-          className={cn(
-            "group flex flex-col leading-none transition-opacity duration-500",
-            filled ? "opacity-100" : "pointer-events-none opacity-0",
-          )}
-          aria-label={`${practice.name}, Startseite`}
-          tabIndex={filled ? undefined : -1}
-        >
-          <span className="font-serif text-[1.35rem] tracking-[-0.01em] text-anthrazit">{practice.shortName}</span>
-          <span className="mt-1 text-[0.8125rem] text-stein">Psychotherapie in Wien</span>
+        {/* Name als Home-Button, immer sichtbar. */}
+        <Link href="/" className="group flex flex-col leading-none" aria-label={`${practice.name}, Startseite`}>
+          <span className="text-[0.8125rem] text-stein">Mag. phil.</span>
+          <span className="mt-0.5 font-serif text-[1.35rem] tracking-[-0.01em] text-anthrazit transition-colors group-hover:text-moos">
+            {practice.shortName}
+          </span>
         </Link>
 
         <nav aria-label="Hauptnavigation" className="hidden items-center gap-7 lg:flex">

@@ -54,13 +54,9 @@ export function Hero({ portrait }: { portrait: string | null }) {
         </motion.div>
 
         <div className="lg:order-1">
-          <motion.p variants={item} className="font-serif text-[1.25rem] italic text-moos md:text-[1.5rem]">
-            Herzlich willkommen
-          </motion.p>
-
-          <motion.h1 variants={item} className="display mt-3 text-anthrazit md:mt-4 lg:text-[clamp(3.4rem,5.2vw,4.8rem)]">
-            <span className="block text-[0.5em] font-normal leading-[1.3] tracking-normal text-stein">Mag. phil.</span>{" "}
-            <span className="block max-w-[13ch]">Laudina Pongrácz</span>
+          {/* Der Name steht als Home-Button in der Navigation; für Suchmaschinen bleibt er Teil der Überschrift. */}
+          <motion.h1 variants={item} className="display text-anthrazit lg:text-[clamp(3.4rem,5.2vw,4.8rem)]">
+            Herzlich willkommen<span className="sr-only"> bei {practice.name}, Psychotherapie in Wien</span>
           </motion.h1>
 
           <motion.ul variants={item} className="mt-6 space-y-1.5 text-[1rem] text-anthrazit md:mt-8 md:text-[1.125rem]">
