@@ -56,7 +56,7 @@ export function Hero({ portrait }: { portrait: string | null }) {
         <div className="lg:order-1">
           {/* Der Name steht als Home-Button in der Navigation; für Suchmaschinen bleibt er Teil der Überschrift. */}
           <motion.h1 variants={item} className="display text-anthrazit lg:text-[clamp(3.4rem,5.2vw,4.8rem)]">
-            Herzlich willkommen<span className="sr-only"> bei {practice.name}, Psychotherapie in Wien</span>
+            Herzlich Willkommen<span className="sr-only"> bei {practice.name}, Psychotherapie in Wien</span>
           </motion.h1>
 
           <motion.ul variants={item} className="mt-6 space-y-1.5 text-[1rem] text-anthrazit md:mt-8 md:text-[1.125rem]">
