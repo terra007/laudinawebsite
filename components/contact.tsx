@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Mail, MapPin, MessageSquareText, Phone } from "lucide-react";
 
 import { ContactForm } from "@/components/contact-form";
@@ -5,7 +6,8 @@ import { Reveal } from "@/components/reveal";
 import { SignalIcon } from "@/components/signal-icon";
 import { locations, practice } from "@/lib/site";
 
-export function Contact() {
+/** Fotos der Praxen nach Standort-ID; ohne Foto bleibt nur die Adresse. */
+export function Contact({ locationImages }: { locationImages: Record<string, string | null> }) {
   return (
     <section id="kontakt" className="bg-kalk py-24 md:py-36">
       <div className="wrap grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
@@ -61,6 +63,17 @@ export function Contact() {
                 key={location.id}
                 className="grid gap-x-8 gap-y-1 border-b border-linie py-6 not-italic sm:grid-cols-[11rem_1fr]"
               >
+                {locationImages[location.id] ? (
+                  <div className="relative mb-4 aspect-[4/3] overflow-hidden rounded-xl sm:col-span-2">
+                    <Image
+                      src={locationImages[location.id] as string}
+                      alt={`${location.title}: ${location.short}`}
+                      fill
+                      sizes="(min-width: 1024px) 40vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                ) : null}
                 <h3 className="font-serif text-[1.3rem] leading-snug">{location.title}</h3>
                 <div>
                   <p className="leading-snug text-anthrazit">

@@ -13,7 +13,7 @@ export const mediaFiles = {
   therapie: "therapie.jpg",
   hypnose: "hypnose.jpg",
   portrait: "portrait.jpg",
-  standortWien: "standort-wien.jpg",
+  standortWien: "standort-wien.webp",
   standortNoe: "standort-noe.jpg",
   orfVideo: "orf-nikotinentzug.mp4",
   orfPoster: "orf-nikotinentzug.jpg",

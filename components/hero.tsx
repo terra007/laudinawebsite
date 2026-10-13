@@ -16,7 +16,14 @@ const item = {
 };
 
 /** Ruhiger Einstieg: Porträt, Name, Methoden und der Weg zum Erstgespräch. */
-export function Hero({ portrait }: { portrait: string | null }) {
+export function Hero({
+  portrait,
+  locationImages,
+}: {
+  portrait: string | null;
+  /** Fotos der Praxen nach Standort-ID; ohne Foto steht eine Stecknadel. */
+  locationImages: Record<string, string | null>;
+}) {
   return (
     <section className="relative isolate overflow-hidden bg-kalk pb-14 pt-24 md:pb-20 md:pt-32 lg:flex lg:min-h-[100svh] lg:items-center">
       <svg
@@ -77,9 +84,15 @@ export function Hero({ portrait }: { portrait: string | null }) {
                     rel="noreferrer"
                     className="group flex items-center gap-3 rounded-2xl bg-papier py-3 pl-3 pr-5 ring-1 ring-linie transition-shadow hover:ring-salbei"
                   >
-                    <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-salbei-hell text-moos transition-colors group-hover:bg-moos group-hover:text-papier">
-                      <MapPin className="size-[1.1rem]" aria-hidden="true" />
-                    </span>
+                    {locationImages[location.id] ? (
+                      <span className="relative size-11 shrink-0 overflow-hidden rounded-full">
+                        <Image src={locationImages[location.id] as string} alt="" fill sizes="44px" className="object-cover" />
+                      </span>
+                    ) : (
+                      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-salbei-hell text-moos transition-colors group-hover:bg-moos group-hover:text-papier">
+                        <MapPin className="size-[1.1rem]" aria-hidden="true" />
+                      </span>
+                    )}
                     <span className="leading-tight">
                       <span className="block font-serif text-[1.15rem] text-anthrazit">{location.badge.title}</span>
                       <span className="mt-0.5 block text-[0.875rem] text-stein">{location.badge.note}</span>
