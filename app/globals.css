@@ -90,7 +90,7 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5.5rem;
+    scroll-padding-top: 4.5rem; /* = Höhe der fixen Navigation */
     -webkit-text-size-adjust: 100%;
   }
 
