@@ -238,12 +238,12 @@ export const subsidy = {
   funds: [
     { short: "BVAEB", name: "Öffentlich Bedienstete, Eisenbahnen, Bergbau", amount: "€ 50,20" },
     { short: "SVS", name: "Selbstständige", amount: "€ 50,00" },
-    // KFA: Betrag der alten Website (Stand 2020). Aktuelle Quellen nennen € 36 bis € 39; bitte bei der KFA bestätigen.
-    { short: "KFA", name: "Bedienstete der Stadt Wien", amount: "€ 45,00" },
+    // KFA: laut Praxis-Veröffentlichungen ab Jänner 2026; eine offizielle KFA-Quelle war nicht auffindbar.
+    { short: "KFA", name: "Bedienstete der Stadt Wien", amount: "€ 39,00" },
     { short: "ÖGK", name: "Österreichische Gesundheitskasse", amount: "€ 33,70" },
   ],
   source: {
-    label: "Stand Jänner 2026 (KFA: Stand 2020). Mehr dazu beim Wiener Landesverband für Psychotherapie",
+    label: "Stand Jänner 2026. Mehr dazu beim Wiener Landesverband für Psychotherapie",
     href: "https://psychotherapie-wlp.at/informationen/psychotherapie/finanzierung/kostenzuschuss",
   },
 };

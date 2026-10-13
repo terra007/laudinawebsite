@@ -33,7 +33,7 @@ export default function Home() {
         <Psychotherapy image={media("therapie")} />
         <Hypnosis image={media("hypnose")} />
         <ServicesGrid orfVideo={orfVideo} orfPoster={media("orfPoster")} />
-        <About portrait={portrait} />
+        <About practicePhoto={locationImages.wien} portrait={portrait} />
         <PricingCards />
         <Contact locationImages={locationImages} />
       </main>

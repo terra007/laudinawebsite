@@ -20,19 +20,21 @@ function Listing({ title, items }: { title: string; items: string[] }) {
   );
 }
 
-export function About({ portrait }: { portrait: string | null }) {
+/** Bild neben „Über mich“: das Praxisfoto aus Wien, sonst das Porträt (das schon im Einstieg steht). */
+export function About({ practicePhoto, portrait }: { practicePhoto: string | null; portrait: string | null }) {
+  const photo = practicePhoto ?? portrait;
   return (
     <section id="ueber-mich" className="bg-kalk py-24 md:py-36">
       <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem_9rem_2rem_2rem] bg-sand-hell lg:max-w-none">
-            {portrait ? (
+            {photo ? (
               <Image
-                src={portrait}
-                alt={`${practice.name}, ${practice.role} in Wien`}
+                src={photo}
+                alt={practicePhoto ? "Praxisraum in Wien, Heinrichsgasse 3" : `${practice.name}, ${practice.role} in Wien`}
                 fill
                 sizes="(min-width: 1024px) 36vw, (min-width: 640px) 448px, 100vw"
-                className="object-cover object-[50%_18%]"
+                className={practicePhoto ? "object-cover" : "object-cover object-[50%_18%]"}
               />
             ) : (
               <SectionArt variant="portrait" />
