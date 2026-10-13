@@ -1,5 +1,6 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { practice } from "@/lib/site";
 
 /** Feste Kontaktknöpfe am Handy: Anruf und WhatsApp mit einem Tipp, auf jeder Höhe der Seite. */
@@ -10,7 +11,7 @@ export function MobileContact() {
   return (
     <div className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 z-30 flex flex-col gap-3 lg:hidden">
       <a href={practice.whatsappHref} target="_blank" rel="noreferrer" aria-label="Nachricht über WhatsApp" className={`${base} bg-papier text-moos ring-1 ring-linie`}>
-        <MessageCircle className="size-6" aria-hidden="true" />
+        <WhatsAppIcon className="size-6" />
       </a>
       <a href={practice.phoneHref} aria-label={`Anrufen: ${practice.phone}`} className={`${base} bg-moos text-papier`}>
         <Phone className="size-6" aria-hidden="true" />

@@ -1,7 +1,8 @@
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/reveal";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { locations, practice } from "@/lib/site";
 
 export function Contact() {
@@ -38,7 +39,7 @@ export function Contact() {
                 rel="noreferrer"
                 className="group flex items-center gap-4 py-2 text-[1.0625rem] text-anthrazit"
               >
-                <MessageCircle className="size-5 shrink-0 text-moos" aria-hidden="true" />
+                <WhatsAppIcon className="size-5 shrink-0 text-moos" />
                 <span className="underline decoration-salbei decoration-1 underline-offset-[0.25em] transition-colors group-hover:decoration-moos">
                   Nachricht über WhatsApp
                 </span>

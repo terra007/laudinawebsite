@@ -6,6 +6,7 @@ import { Dialog as DialogPrimitive } from "radix-ui";
 import { Menu, Phone, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { navigation, practice } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -50,6 +51,11 @@ export function Navbar({ solid = false }: { solid?: boolean }) {
         <div className="flex items-center gap-2">
           <Button asChild size="sm" className="hidden sm:inline-flex">
             <Link href="/#kontakt">Erstgespräch vereinbaren</Link>
+          </Button>
+          <Button asChild variant="ghost" size="icon" className="sm:hidden">
+            <a href={practice.whatsappHref} target="_blank" rel="noreferrer" aria-label="Nachricht über WhatsApp">
+              <WhatsAppIcon className="size-[1.15rem]" />
+            </a>
           </Button>
           <Button asChild variant="ghost" size="icon" className="sm:hidden">
             <a href={practice.phoneHref} aria-label={`Anrufen: ${practice.phone}`}>
