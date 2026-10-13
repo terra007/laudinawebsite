@@ -201,12 +201,17 @@ export const about = {
     "Wiener Landesverband für Psychotherapie (WLP)",
     "Vereinigung Österreichischer Psychotherapeutinnen (VÖPP)",
   ],
-  /** Kurzfassung, die sofort sichtbar ist. Der vollständige Werdegang lässt sich aufklappen. */
-  highlights: [
-    "Hypnosepsychotherapie (ÖGATAP)",
-    "Traumatherapie, systemische Paartherapie, Sexualtherapie",
-    "Krisenintervention und Notfallpsychologie (ÖAGG)",
-    "2014–2020 Privatklinik „Woman & Health“",
+  intro:
+    "Ich verbinde tiefenpsychologisches Verstehen mit der Kraft der Hypnose. Meine Zusatzausbildungen erlauben mir, gezielt auf Ihr Anliegen einzugehen, ob es um belastende Erfahrungen, Ihre Beziehung oder akute Krisen geht.",
+  /** Sofort sichtbar. Der vollständige Werdegang lässt sich aufklappen. */
+  specializations: [
+    { title: "Hypnosepsychotherapie", detail: "Psychotherapeutisches Fachspezifikum, ÖGATAP" },
+    { title: "Traumatherapie", detail: "Curriculum, VÖPP" },
+    { title: "Systemische Paartherapie", detail: "Curriculum, Wien" },
+    { title: "Sexualtherapie", detail: "Österreichisches Institut für Sexualpädagogik und Sexualtherapien" },
+    { title: "Krisenintervention und Notfallpsychologie", detail: "Curriculum, ÖAGG" },
+    { title: "Sporthypnose", detail: "Milton Erickson Institut Innsbruck" },
+    { title: "Hypnosystemische Aufstellungen", detail: "nach Gunther Schmidt" },
   ],
   mediaTitle: "Hypnose zum Nikotinentzug: ORF-Dreh in meiner Praxis",
 };

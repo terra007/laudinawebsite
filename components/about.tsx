@@ -49,10 +49,14 @@ export function About({ portrait }: { portrait: string | null }) {
           </Reveal>
 
           <Reveal>
-            <ul className="mt-8 border-t border-linie">
-              {about.highlights.map((entry) => (
-                <li key={entry} className="border-b border-linie py-3 leading-snug text-anthrazit">
-                  {entry}
+            <p className="prose-text mt-8 text-anthrazit">{about.intro}</p>
+
+            <h3 className="mt-10 font-serif text-[1.45rem]">Meine Spezialisierungen</h3>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+              {about.specializations.map((entry) => (
+                <li key={entry.title} className="rounded-xl bg-papier p-5">
+                  <p className="font-serif text-[1.2rem] leading-snug text-anthrazit">{entry.title}</p>
+                  <p className="mt-1 text-[0.875rem] leading-snug text-stein">{entry.detail}</p>
                 </li>
               ))}
             </ul>
