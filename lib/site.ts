@@ -30,7 +30,7 @@ export const locations = [
     image: "standortWien" as const,
     lines: ["Heinrichsgasse 3, 2. Stock, Tür 18b", "1010 Wien"],
     note: "Schottenring, Ecke Rudolfsplatz",
-    mapHref: "https://www.openstreetmap.org/search?query=Heinrichsgasse%203%2C%201010%20Wien",
+    mapHref: "https://www.google.com/maps/search/?api=1&query=Heinrichsgasse%203%2C%201010%20Wien",
   },
   {
     id: "eggendorf",
@@ -42,7 +42,7 @@ export const locations = [
     lines: ["Außer Ort 70", "2031 Eggendorf im Thale"],
     note: "Bezirk Hollabrunn, Termine nach Vereinbarung",
     mapHref:
-      "https://www.openstreetmap.org/search?query=Au%C3%9Fer%20Ort%2070%2C%202031%20Eggendorf%20im%20Thale",
+      "https://www.google.com/maps/search/?api=1&query=Au%C3%9Fer%20Ort%2070%2C%202031%20Eggendorf%20im%20Thale",
   },
 ];
 
