@@ -5,6 +5,7 @@ import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { Hypnosis } from "@/components/hypnosis";
+import { MobileContact } from "@/components/mobile-contact";
 import { Navbar } from "@/components/navbar";
 import { PricingCards } from "@/components/pricing-cards";
 import { Psychotherapy } from "@/components/psychotherapy";
@@ -40,6 +41,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <MobileContact />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData(portrait)).replace(/</g, "\\u003c") }} />
     </>
   );

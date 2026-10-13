@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { practice } from "@/lib/site";
+import { about, practice } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Impressum, Datenschutz, Verschwiegenheit",
@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 /*
- * Texte von der bisherigen Website übernommen. Abweichungen gegenüber dem
- * alten Stand sind mit GEÄNDERT markiert und sollten vor dem Livegang
- * rechtlich geprüft werden.
+ * Überarbeitet im Oktober 2026 auf Grundlage des Psychotherapiegesetzes 2024
+ * und der DSGVO. Keine Rechtsberatung: vor dem Livegang von einer Fachstelle
+ * (z. B. Rechtsberatung des ÖBVP) bestätigen lassen.
  */
 
 function Block({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
@@ -25,6 +25,12 @@ function Block({ id, title, children }: { id: string; title: string; children: R
     </section>
   );
 }
+
+const mail = (
+  <a href={`mailto:${practice.email}`} className="text-link break-all">
+    {practice.email}
+  </a>
+);
 
 export default function ImpressumPage() {
   return (
@@ -39,151 +45,129 @@ export default function ImpressumPage() {
           <div className="mt-14 max-w-[68ch]">
             <Block id="verschwiegenheit" title="Verschwiegenheit">
               <p>
-                Die Verschwiegenheitspflicht ist ein zentrales Element der Psychotherapie. § 15 des
-                Psychotherapiegesetzes verpflichtet PsychotherapeutInnen sowie deren Hilfspersonen zur
-                Verschwiegenheit über alle ihnen in Ausübung ihres Berufes anvertrauten oder bekannt gewordenen
-                Geheimnisse. Die Verschwiegenheitspflicht besteht allgemein, somit grundsätzlich uneingeschränkt
-                gegenüber jedweder Person oder Einrichtung außerhalb der KlientInnen/PatientInnen, also z. B.
-                gegenüber Ehepartnern, sonstigen Familienangehörigen, staatlichen Dienststellen oder anderen
-                Sozialeinrichtungen.
+                Als Psychotherapeutin bin ich gesetzlich zur Verschwiegenheit über alles verpflichtet, was mir in
+                Ausübung meines Berufes anvertraut oder bekannt wird (§ 45 Psychotherapiegesetz 2024). Das gilt
+                gegenüber allen Personen und Einrichtungen, also auch gegenüber Angehörigen, Behörden oder
+                Versicherungen. Die psychotherapeutische Verschwiegenheit ist damit strenger gefasst als etwa die
+                ärztliche.
               </p>
               <p>
-                Die Verschwiegenheitspflicht der PsychotherapeutInnen ist somit wesentlich strenger gefasst als
-                beispielsweise jene der ÄrztInnen.
-              </p>
-              <p>
-                Wünschen KlientInnen/PatientInnen ausdrücklich eine Datenweitergabe an z. B. Versicherungen, ist
-                eine wirksame Entbindung von der Verschwiegenheitspflicht unerlässlich.
-              </p>
-              <p>
-                Über die konkrete Handhabung im Anlassfall informieren wir Sie gerne im ÖBVP-Büro. Beschlossenes
-                Gewaltschutzpaket bringt auch Änderung bei der psychotherapeutischen Verschwiegenheit. Nach einem
-                eingebrachten Abänderungsantrag wurde das Gewaltschutzpaket am 25.09.2019 im Parlament beschlossen.
-                Das Psychotherapiegesetz ist davon im § 15 zur Verschwiegenheit betroffen.
-              </p>
-              <p>
-                Lesen Sie dazu den ÖBVP-Newsflash. Das Gesundheitsministerium hat dazu eine ausführliche
-                Information für PsychotherapeutInnen publiziert.
-              </p>
-              <p className="text-[0.9375rem] text-stein">
-                Quelle: 19.9.2020,{" "}
-                <a
-                  href="https://www.psychotherapie.at/psychotherapeutinnen/rechtsinformationen"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-link break-all"
-                >
-                  psychotherapie.at/psychotherapeutinnen/rechtsinformationen
-                </a>
+                Möchten Sie, dass ich Informationen weitergebe, zum Beispiel an eine Versicherung, brauche ich dafür
+                Ihre ausdrückliche Entbindung von der Verschwiegenheitspflicht.
               </p>
             </Block>
 
             <Block id="datenschutz" title="Datenschutzerklärung">
               <p>
                 Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich verarbeite Ihre Daten
-                daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO). Nachfolgend informiere
-                ich Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen meiner Website.
+                ausschließlich auf Grundlage der Datenschutz-Grundverordnung (DSGVO) und des österreichischen
+                Datenschutzgesetzes.
+              </p>
+
+              <h3>Verantwortliche</h3>
+              <p>
+                {practice.name}, Heinrichsgasse 3/18b, 1010 Wien, {mail}
               </p>
 
               <h3>Kontakt mit mir</h3>
               <p>
-                Wenn Sie per Formular auf der Website oder per E-Mail Kontakt mit mir aufnehmen, werden Ihre
-                angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir
-                gespeichert. Diese Daten gebe ich nicht aus der Hand.
+                Wenn Sie mir über das Formular, per E-Mail, telefonisch oder über WhatsApp schreiben, verarbeite ich
+                Ihre Angaben, um Ihre Anfrage zu beantworten und einen Termin zu vereinbaren (Art. 6 Abs. 1 lit. b
+                DSGVO). Angaben zu Ihrer Gesundheit verarbeite ich nur, soweit Sie sie mir mitteilen und sie für die
+                Behandlung nötig sind (Art. 9 Abs. 2 lit. h DSGVO). Für WhatsApp gelten zusätzlich die
+                Datenschutzbestimmungen von WhatsApp; vertrauliche Inhalte besprechen Sie bitte telefonisch oder in
+                der Praxis.
               </p>
 
-              {/* GEÄNDERT: neuer Abschnitt, beschreibt das Online-Stammdatenblatt dieser Website. */}
               <h3>Stammdatenblatt online</h3>
               <p>
                 Wenn Sie das Stammdatenblatt auf dieser Website ausfüllen, wird aus Ihren Angaben und Ihrer
-                Unterschrift in Ihrem Browser ein PDF erstellt. Beim Senden wird dieses PDF per E-Mail an die
-                Praxis übermittelt. Auf dem Webserver wird es nicht gespeichert.
+                Unterschrift in Ihrem Browser ein PDF erstellt. Beim Senden wird dieses PDF per E-Mail an die Praxis
+                übermittelt. Auf dem Webserver wird es nicht gespeichert.
               </p>
 
               <h3>Datenspeicherung</h3>
               <p>
-                Zum Zweck der Vertragsabwicklung werden folgende Daten bei mir gespeichert: Vor- und Zuname,
-                Wohnadresse, Telefonnummer, E-Mail-Adresse. Die von Ihnen bereitgestellten Daten sind zur
-                Vertragserfüllung bzw. zur Durchführung vorvertraglicher Maßnahmen erforderlich. Eine
-                Datenübermittlung an Dritte erfolgt nicht.
+                Für Behandlung und Abrechnung speichere ich Vor- und Zuname, Adresse, Geburtsdatum, Telefonnummer,
+                E-Mail-Adresse und gegebenenfalls Ihre Sozialversicherungsdaten. Ich bewahre sie so lange auf, wie es
+                die gesetzlichen Dokumentations- und Aufbewahrungspflichten verlangen. Eine Weitergabe an Dritte
+                erfolgt nur mit Ihrer Zustimmung oder wenn ein Gesetz sie vorschreibt.
               </p>
 
-              {/* GEÄNDERT: Die alte Website nannte Cookies und Google Analytics. Diese Website setzt beides nicht ein. */}
-              <h3>Cookies</h3>
+              <h3>Hosting und Server-Protokolle</h3>
               <p>
-                Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Dienste. Schriften
-                und Skripte werden vom eigenen Server geladen.
+                Diese Website wird bei Vercel Inc. (USA) betrieben. Beim Aufruf der Seiten verarbeitet der Server
+                technisch notwendige Daten wie IP-Adresse, Zeitpunkt und aufgerufene Seite, um die Website sicher
+                auszuliefern (Art. 6 Abs. 1 lit. f DSGVO). Vercel ist nach dem EU-US Data Privacy Framework
+                zertifiziert.
+              </p>
+
+              <h3>Cookies und Analyse</h3>
+              <p>
+                Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Dienste. Schriften und
+                Skripte werden vom eigenen Server geladen. Google Maps und WhatsApp öffnen sich erst, wenn Sie den
+                jeweiligen Link anklicken.
               </p>
 
               <h3>Ihre Rechte</h3>
               <p>
-                Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung,
-                Datenübertragbarkeit, Widerruf und Widerspruch zu.
-              </p>
-
-              <h3>Datenschutz</h3>
-              <p>
-                Die Nutzung meiner Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf
-                meinen Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben
-                werden, erfolgt dies stets auf freiwilliger Basis. Diese Daten werden ohne ausdrückliche Zustimmung
-                nicht an Dritte weitergegeben.
-              </p>
-              <p>
-                Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur
-                Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit
-                ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte
-                im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.
+                Ihnen stehen die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+                Datenübertragbarkeit und Widerspruch zu. Eine Einwilligung können Sie jederzeit widerrufen. Wenn Sie
+                meinen, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei
+                der{" "}
+                <a href="https://www.dsb.gv.at" target="_blank" rel="noreferrer" className="text-link">
+                  Österreichischen Datenschutzbehörde
+                </a>{" "}
+                beschweren.
               </p>
             </Block>
 
             <Block id="impressum" title="Impressum">
-              <p>Für den Inhalt verantwortlich:</p>
+              <p>Angaben gemäß § 5 E-Commerce-Gesetz und Offenlegung gemäß § 25 Mediengesetz</p>
               <address className="not-italic">
                 {practice.name}
                 <br />
-                Heinrichsgasse 3/18b
+                Heinrichsgasse 3/18b, 1010 Wien
                 <br />
-                1010 Wien
+                Außer Ort 70, 2031 Eggendorf im Thale
                 <br />
                 T:{" "}
                 <a href={practice.phoneHref} className="text-link">
                   {practice.phone}
                 </a>
                 <br />
-                {/* GEÄNDERT: Die alte Seite nannte praxis@psychotherapie.com, vermutlich ein Tippfehler. */}
-                M:{" "}
-                <a href={`mailto:${practice.email}`} className="text-link break-all">
-                  {practice.email}
-                </a>
+                M: {mail}
               </address>
 
-              <h3>AGB</h3>
-              <p>Es gelten die AGB der österreichischen Psychotherapeuten.</p>
+              <p>
+                Berufsbezeichnung: Psychotherapeutin (Hypnosepsychotherapie), verliehen in Österreich.{" "}
+                {practice.registration}.
+              </p>
+              <p>
+                Aufsichtsbehörde: Bundesministerium für Arbeit, Soziales, Gesundheit, Pflege und Konsumentenschutz.
+              </p>
+              <p>
+                Berufsrechtliche Vorschriften: Psychotherapiegesetz 2024, abrufbar im{" "}
+                <a href="https://www.ris.bka.gv.at" target="_blank" rel="noreferrer" className="text-link">
+                  Rechtsinformationssystem des Bundes
+                </a>
+                .
+              </p>
+              <p>Mitgliedschaften: {about.memberships.join(", ")}.</p>
+              <p>Grundlegende Richtung: Information über die psychotherapeutische Praxis und ihr Angebot.</p>
 
               <h3>Haftungsausschluss</h3>
               <p>
-                <strong className="font-medium">Texte und Haftung für Inhalte.</strong> Die Inhalte dieser Seiten
-                wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der
-                Inhalte wird keine Gewähr übernommen.
-              </p>
-              <p>
-                <strong className="font-medium">Haftung für Links.</strong> Bitte um Kenntnisnahme, dass ich keinen
-                Einfluss auf die Inhalte fremder Webseiten habe. Für die Inhalte der verlinkten Seiten ist stets
-                der jeweilige Anbieter oder Betreiber selbst verantwortlich.
+                Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und
+                Aktualität wird keine Gewähr übernommen. Für die Inhalte verlinkter fremder Seiten ist stets der
+                jeweilige Anbieter verantwortlich.
               </p>
 
               <h3>Urheberrecht</h3>
               <p>
-                Die Inhalte und Werke dieser Seiten unterliegen dem österreichischen Urheberrecht. Die
-                Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des
-                Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-                Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet
-                – außer mit ausdrücklicher und schriftlicher Zustimmung.
-              </p>
-              <p>
-                Der Inhalt dieser Website ist urheberrechtlich geschützt. Jede Bearbeitung, Vervielfältigung,
-                Verbreitung und/oder öffentliche Wiedergabe unabhängig vom verwendeten Medium stellt einen
-                Urheberrechtsverstoß dar.
+                Die Inhalte dieser Website unterliegen dem österreichischen Urheberrecht. Vervielfältigung,
+                Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen
+                Zustimmung. Stimmungsbilder: Artem Beliaikin und Daniel Sessler auf Unsplash.
               </p>
             </Block>
           </div>

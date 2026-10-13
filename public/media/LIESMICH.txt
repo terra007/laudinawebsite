@@ -14,6 +14,7 @@ Website sie automatisch. Fehlt sie, zeigt die Seite ihre gezeichnete Variante.
   orf-nikotinentzug.mp4  ORF-Beitrag; blendet den Bereich "Medien" ein
   orf-nikotinentzug.jpg  Standbild zum ORF-Beitrag
 
-hero.mp4, hero-poster.jpg, therapie.jpg und hypnose.jpg erzeugt
+therapie.jpg und hypnose.jpg sind Unsplash-Bilder von der bisherigen Website
+(Artem Beliaikin, Daniel Sessler). hero.mp4 und hero-poster.jpg erzeugt
 `npm run media` über Higgsfield. Porträt und ORF-Beitrag stammen von der
 bisherigen Website und müssen von Hand hierher kopiert werden.
