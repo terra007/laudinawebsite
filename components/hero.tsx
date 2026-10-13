@@ -91,11 +91,15 @@ export function Hero({
               Herzlich willkommen
             </motion.p>
 
-            <motion.h1 variants={item} className="display mt-3 max-w-[13ch] md:mt-4 text-anthrazit lg:text-[clamp(3.4rem,5.4vw,5rem)]">
+            <motion.h1 variants={item} className="display mt-3 md:mt-4 text-anthrazit lg:text-[clamp(3.4rem,5.4vw,5rem)]">
               <span className="block text-[0.5em] font-normal leading-[1.3] tracking-normal text-stein">
                 Mag. phil.
+              </span>{" "}
+              <span className="block max-w-[13ch]">Laudina Pongrácz</span>{" "}
+              {/* Fachgebiet und Region gehören in die Hauptüberschrift, damit Suchmaschinen die Seite zuordnen. */}
+              <span className="mt-4 block font-sans text-[clamp(1.05rem,1.5vw,1.25rem)] font-normal leading-snug tracking-normal text-stein md:mt-5">
+                Psychotherapie &amp; Hypnose in Wien und Niederösterreich
               </span>
-              Laudina Pongrácz
             </motion.h1>
           </div>
 

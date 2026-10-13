@@ -64,6 +64,7 @@ export function structuredData(portrait: string | null) {
           addressCountry: "AT",
         },
         areaServed: region[location.id],
+        hasMap: location.mapHref,
         makesOffer: pricing.map((offer) => ({
           "@type": "Offer",
           name: offer.title,
