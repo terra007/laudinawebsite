@@ -68,6 +68,8 @@ export const hypnosis = {
 export type Focus = {
   id: string;
   title: string;
+  /** Kleinere Zeile direkt unter dem Titel. */
+  subtitle?: string;
   icon: string;
   /** Ausführlicher Text, öffnet sich im Dialog. */
   body?: { heading?: string; text: string }[];
@@ -79,6 +81,7 @@ export const focusAreas: Focus[] = [
   {
     id: "trauma",
     title: "Traumatherapie",
+    subtitle: "Transgenerationale Weitergabe von Traumata",
     icon: "Layers",
     body: [
       {
@@ -88,7 +91,7 @@ export const focusAreas: Focus[] = [
         text: "Solche Ereignisse können extremen Stress und Gefühle der Hilflosigkeit und des Entsetzens auslösen. Dies kann der Fall sein, wenn jemand selbst von dem Ereignis betroffen ist oder wenn er – etwa als Augenzeuge – miterlebt, wie andere Opfer dieses Ereignisses werden.",
       },
       {
-        heading: "Teilgebiet: transgenerationale Weitergabe von Traumata",
+        heading: "Transgenerationale Weitergabe von Traumata",
         text: "Unter transgenerationalem Trauma versteht man die meist unbewusste Weitergabe traumatischer Erfahrungen an nachfolgende Generationen oder Gesellschaften. Nachfahren leiden an Traumafolge-Symptomen, ohne dass sie das Trauma selbst erlebt haben.",
       },
     ],

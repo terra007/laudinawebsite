@@ -68,6 +68,7 @@ function FocusCard({ area, featured }: { area: Focus; featured: boolean }) {
 
       <div className={cn("flex min-w-0 flex-1 flex-col", featured ? "mt-6 lg:mt-0" : "mt-6")}>
         <h3 className="h-card max-w-[30ch] text-anthrazit">{area.title}</h3>
+        {area.subtitle ? <p className="mt-1 text-[0.9375rem] text-stein">{area.subtitle}</p> : null}
 
         <div
           id={textId}
