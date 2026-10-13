@@ -14,20 +14,25 @@ export function PricingCards() {
           <h2 className="h-section">Setting und Kosten</h2>
         </Reveal>
 
-        <RevealGroup className="mt-12 grid gap-4 md:grid-cols-2">
+        <RevealGroup className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {pricing.map((offer) => (
             <RevealItem key={offer.id}>
               <article className="flex h-full flex-col justify-between rounded-xl bg-papier p-8 md:p-10">
                 <div>
                   <h3 className="font-serif text-[1.9rem] leading-tight">{offer.title}</h3>
-                  <p className="mt-3 flex items-center gap-2 text-stein">
-                    <Clock className="size-[1.05em]" aria-hidden="true" />
-                    {offer.duration} pro Einheit
-                  </p>
+                  {offer.subtitle ? <p className="mt-2 text-[1.0625rem] text-anthrazit">{offer.subtitle}</p> : null}
+                  {offer.duration ? (
+                    <p className="mt-3 flex items-center gap-2 text-stein">
+                      <Clock className="size-[1.05em]" aria-hidden="true" />
+                      {offer.duration} pro Einheit
+                    </p>
+                  ) : null}
                 </div>
-                <p className="mt-12 font-serif text-[clamp(2.8rem,5vw,4rem)] font-light leading-none tracking-[-0.02em] text-moos-tief">
-                  {offer.price}
-                </p>
+                {offer.price ? (
+                  <p className="mt-12 font-serif text-[clamp(2.8rem,5vw,4rem)] font-light leading-none tracking-[-0.02em] text-moos-tief">
+                    {offer.price}
+                  </p>
+                ) : null}
               </article>
             </RevealItem>
           ))}

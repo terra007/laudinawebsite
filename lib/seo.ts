@@ -65,11 +65,11 @@ export function structuredData(portrait: string | null) {
         },
         areaServed: region[location.id],
         hasMap: location.mapHref,
-        makesOffer: pricing.map((offer) => ({
+        makesOffer: pricing.filter((offer) => offer.price).map((offer) => ({
           "@type": "Offer",
           name: offer.title,
           description: `${offer.duration} pro Einheit`,
-          price: offer.price.replace(/[^\d]/g, ""),
+          price: (offer.price ?? "").replace(/[^\d]/g, ""),
           priceCurrency: "EUR",
         })),
       })),

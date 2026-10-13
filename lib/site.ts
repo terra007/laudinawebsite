@@ -216,9 +216,12 @@ export const about = {
   mediaTitle: "Hypnose zum Nikotinentzug: ORF-Dreh in meiner Praxis",
 };
 
-export const pricing = [
+export type Offer = { id: string; title: string; subtitle?: string; duration?: string; price?: string };
+
+export const pricing: Offer[] = [
   { id: "einzel", title: "Einzeltherapie", duration: "50 Minuten", price: "€ 130,–" },
   { id: "paar", title: "Paartherapie", duration: "100 Minuten", price: "€ 260,–" },
+  { id: "gruppe", title: "Gruppe", subtitle: "Hypnosystemische Aufstellung" },
 ];
 
 export const subsidy = {
