@@ -36,11 +36,11 @@ export const locations = [
     id: "eggendorf",
     title: "Praxis Niederösterreich",
     place: "Niederösterreich",
-    short: "Eggendorf im Thale, nach Vereinbarung",
+    short: "Außer Ort 70, 2031 Eggendorf im Thale",
     art: "weinviertel" as const,
     image: "standortNoe" as const,
     lines: ["Außer Ort 70", "2031 Eggendorf im Thale"],
-    note: "Bezirk Hollabrunn, Termine nach Vereinbarung",
+    note: "Bezirk Hollabrunn",
     mapHref:
       "https://www.google.com/maps/search/?api=1&query=Au%C3%9Fer%20Ort%2070%2C%202031%20Eggendorf%20im%20Thale",
   },
