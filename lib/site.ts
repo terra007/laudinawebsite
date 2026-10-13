@@ -15,7 +15,8 @@ export const practice = {
   registration: "Eintragungsnummer 11274 in der Liste des Bundesministeriums für Gesundheit",
   phone: "+43 676 56 23 337",
   phoneHref: "tel:+436765623337",
-  whatsappHref: "https://wa.me/436765623337",
+  signalHref: "https://signal.me/#p/+436765623337",
+  smsHref: "sms:+436765623337",
   email: "praxis@pongracz-psychotherapie.com",
   url: "https://www.pongracz-psychotherapie.com",
 };

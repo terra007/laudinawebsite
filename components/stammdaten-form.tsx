@@ -386,8 +386,8 @@ export function StammdatenForm() {
                 {practice.email}
               </a>{" "}
               oder per{" "}
-              <a href={practice.whatsappHref} target="_blank" rel="noreferrer" className="text-link">
-                WhatsApp
+              <a href={practice.signalHref} target="_blank" rel="noreferrer" className="text-link">
+                Signal
               </a>
               .
             </p>

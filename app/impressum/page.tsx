@@ -71,12 +71,12 @@ export default function ImpressumPage() {
 
               <h3>Kontakt mit mir</h3>
               <p>
-                Wenn Sie mir über das Formular, per E-Mail, telefonisch oder über WhatsApp schreiben, verarbeite ich
+                Wenn Sie mir über das Formular, per E-Mail, telefonisch, per SMS oder über Signal schreiben, verarbeite ich
                 Ihre Angaben, um Ihre Anfrage zu beantworten und einen Termin zu vereinbaren (Art. 6 Abs. 1 lit. b
                 DSGVO). Angaben zu Ihrer Gesundheit verarbeite ich nur, soweit Sie sie mir mitteilen und sie für die
-                Behandlung nötig sind (Art. 9 Abs. 2 lit. h DSGVO). Für WhatsApp gelten zusätzlich die
-                Datenschutzbestimmungen von WhatsApp; vertrauliche Inhalte besprechen Sie bitte telefonisch oder in
-                der Praxis.
+                Behandlung nötig sind (Art. 9 Abs. 2 lit. h DSGVO). Für Signal gelten zusätzlich die
+                Datenschutzbestimmungen von Signal; SMS werden unverschlüsselt übertragen, vertrauliche Inhalte
+                besprechen Sie daher bitte telefonisch oder in der Praxis.
               </p>
 
               <h3>Stammdatenblatt online</h3>
@@ -105,7 +105,7 @@ export default function ImpressumPage() {
               <h3>Cookies und Analyse</h3>
               <p>
                 Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Dienste. Schriften und
-                Skripte werden vom eigenen Server geladen. Google Maps und WhatsApp öffnen sich erst, wenn Sie den
+                Skripte werden vom eigenen Server geladen. Google Maps und Signal öffnen sich erst, wenn Sie den
                 jeweiligen Link anklicken.
               </p>
 

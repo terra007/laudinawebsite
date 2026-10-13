@@ -3,10 +3,10 @@
 import * as React from "react";
 import Link from "next/link";
 import { Dialog as DialogPrimitive } from "radix-ui";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, MessageSquareText, Phone, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { SignalIcon } from "@/components/signal-icon";
 import { navigation, practice } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -52,16 +52,24 @@ export function Navbar({ solid = false }: { solid?: boolean }) {
           <Button asChild size="sm" className="hidden sm:inline-flex">
             <Link href="/#kontakt">Erstgespräch vereinbaren</Link>
           </Button>
-          <Button asChild variant="ghost" size="icon" className="sm:hidden">
-            <a href={practice.whatsappHref} target="_blank" rel="noreferrer" aria-label="Nachricht über WhatsApp">
-              <WhatsAppIcon className="size-[1.15rem]" />
-            </a>
-          </Button>
-          <Button asChild variant="ghost" size="icon" className="sm:hidden">
-            <a href={practice.phoneHref} aria-label={`Anrufen: ${practice.phone}`}>
-              <Phone />
-            </a>
-          </Button>
+          {/* Am Handy: Signal, SMS und Anruf direkt in der Kopfzeile. */}
+          <div className="flex items-center sm:hidden">
+            <Button asChild variant="ghost" size="icon" className="size-10">
+              <a href={practice.signalHref} target="_blank" rel="noreferrer" aria-label="Nachricht über Signal">
+                <SignalIcon className="size-[1.15rem]" />
+              </a>
+            </Button>
+            <Button asChild variant="ghost" size="icon" className="size-10">
+              <a href={practice.smsHref} aria-label="SMS schreiben">
+                <MessageSquareText />
+              </a>
+            </Button>
+            <Button asChild variant="ghost" size="icon" className="size-10">
+              <a href={practice.phoneHref} aria-label={`Anrufen: ${practice.phone}`}>
+                <Phone />
+              </a>
+            </Button>
+          </div>
 
           <DialogPrimitive.Root open={open} onOpenChange={setOpen}>
             <DialogPrimitive.Trigger asChild>

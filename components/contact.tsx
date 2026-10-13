@@ -1,8 +1,8 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, MessageSquareText, Phone } from "lucide-react";
 
 import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/reveal";
-import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { SignalIcon } from "@/components/signal-icon";
 import { locations, practice } from "@/lib/site";
 
 export function Contact() {
@@ -34,14 +34,22 @@ export function Contact() {
             </li>
             <li>
               <a
-                href={practice.whatsappHref}
+                href={practice.signalHref}
                 target="_blank"
                 rel="noreferrer"
                 className="group flex items-center gap-4 py-2 text-[1.0625rem] text-anthrazit"
               >
-                <WhatsAppIcon className="size-5 shrink-0 text-moos" />
+                <SignalIcon className="size-5 shrink-0 text-moos" />
                 <span className="underline decoration-salbei decoration-1 underline-offset-[0.25em] transition-colors group-hover:decoration-moos">
-                  Nachricht über WhatsApp
+                  Nachricht über Signal
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href={practice.smsHref} className="group flex items-center gap-4 py-2 text-[1.0625rem] text-anthrazit">
+                <MessageSquareText className="size-5 shrink-0 text-moos" aria-hidden="true" />
+                <span className="underline decoration-salbei decoration-1 underline-offset-[0.25em] transition-colors group-hover:decoration-moos">
+                  SMS schreiben
                 </span>
               </a>
             </li>
