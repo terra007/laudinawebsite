@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Clock, FileText } from "lucide-react";
 
+import { More } from "@/components/more";
 import { Reveal, RevealGroup, RevealItem } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { pricing, subsidy } from "@/lib/site";
@@ -49,22 +50,24 @@ export function PricingCards() {
           </div>
         </Reveal>
 
-        <div className="mt-24 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+        <div className="mt-16 grid gap-12 md:mt-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <Reveal>
             <h3 className="font-serif text-[clamp(1.6rem,2.6vw,2.2rem)] leading-tight">
               Kostenzuschuss der Krankenkasse
             </h3>
             <p className="prose-text mt-5 text-anthrazit">{subsidy.intro}</p>
-            <ol className="mt-8 space-y-5">
-              {subsidy.steps.map((step, index) => (
-                <li key={step} className="flex gap-5">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-moos/40 font-serif text-[1.05rem] text-moos">
-                    {index + 1}
-                  </span>
-                  <p className="max-w-[54ch] pt-1 text-anthrazit">{step}</p>
-                </li>
-              ))}
-            </ol>
+            <More label="So beantragen Sie den Zuschuss" className="mt-5">
+              <ol className="mt-4 space-y-5">
+                {subsidy.steps.map((step, index) => (
+                  <li key={step} className="flex gap-5">
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-moos/40 font-serif text-[1.05rem] text-moos">
+                      {index + 1}
+                    </span>
+                    <p className="max-w-[54ch] pt-1 text-anthrazit">{step}</p>
+                  </li>
+                ))}
+              </ol>
+            </More>
           </Reveal>
 
           <Reveal delay={0.1}>

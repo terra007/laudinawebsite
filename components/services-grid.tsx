@@ -59,7 +59,7 @@ function FocusCard({ area, featured }: { area: Focus; featured: boolean }) {
       id={`schwerpunkt-${area.id}`}
       className={cn(
         "group flex h-full flex-col rounded-xl bg-papier p-7 transition-[transform,box-shadow] duration-500 ease-out hover:scale-[1.012] hover:shadow-[0_0_0_1px_var(--salbei),0_26px_60px_-24px_rgba(110,39,39,0.55)] md:p-8",
-        featured ? "lg:flex-row lg:items-start lg:gap-8" : "sm:min-h-[21.5rem]",
+        featured ? "lg:flex-row lg:items-start lg:gap-8" : "sm:min-h-[17rem]",
       )}
     >
       <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-salbei-hell text-moos transition-colors duration-500 group-hover:bg-moos group-hover:text-papier">
@@ -73,7 +73,7 @@ function FocusCard({ area, featured }: { area: Focus; featured: boolean }) {
           id={textId}
           className={cn(
             "mt-3 max-w-[70ch] space-y-3 hyphens-auto text-[0.9875rem] leading-relaxed",
-            open ? "text-anthrazit" : "line-clamp-3 text-stein",
+            open ? "text-anthrazit" : "line-clamp-2 text-stein",
           )}
         >
           {area.body?.map((block) => (

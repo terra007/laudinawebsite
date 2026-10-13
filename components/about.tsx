@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { More } from "@/components/more";
 import { Reveal } from "@/components/reveal";
 import { SectionArt } from "@/components/section-art";
 import { about, practice } from "@/lib/site";
@@ -56,16 +57,19 @@ export function About({
           </Reveal>
 
           <Reveal>
-            <Listing title="Ausbildung und laufende Fortbildungen" items={about.education} />
-          </Reveal>
-          <Reveal>
-            <Listing title="Berufserfahrung" items={about.experience} />
-          </Reveal>
-          <Reveal>
-            <Listing title="Praktika" items={about.internships} />
-          </Reveal>
-          <Reveal>
-            <Listing title="Mitgliedschaften" items={about.memberships} />
+            <ul className="mt-8 border-t border-linie">
+              {about.highlights.map((entry) => (
+                <li key={entry} className="border-b border-linie py-3 leading-snug text-anthrazit">
+                  {entry}
+                </li>
+              ))}
+            </ul>
+            <More label="Ausbildung und Werdegang anzeigen" className="mt-4">
+              <Listing title="Ausbildung und laufende Fortbildungen" items={about.education} />
+              <Listing title="Berufserfahrung" items={about.experience} />
+              <Listing title="Praktika" items={about.internships} />
+              <Listing title="Mitgliedschaften" items={about.memberships} />
+            </More>
           </Reveal>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Plus } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { crisis, reasons } from "@/lib/site";
@@ -12,6 +12,9 @@ import { cn } from "@/lib/utils";
 /** Die 18 Sätze zum Antippen. Die Auswahl bleibt im Browser. */
 export function ReasonsCheck() {
   const [selected, setSelected] = React.useState<Set<number>>(new Set());
+  // Zuerst nur die ersten Sätze zeigen, damit der Abschnitt nicht erschlägt.
+  const [showAll, setShowAll] = React.useState(false);
+  const visible = showAll ? reasons.items : reasons.items.slice(0, 6);
   const count = selected.size;
 
   const toggle = (index: number) =>
@@ -25,7 +28,7 @@ export function ReasonsCheck() {
   return (
     <div>
       <ul className="grid gap-x-10 md:grid-cols-2">
-        {reasons.items.map((reason, index) => {
+        {visible.map((reason, index) => {
           const active = selected.has(index);
           return (
             <li key={reason} className="border-b border-linie">
@@ -54,6 +57,16 @@ export function ReasonsCheck() {
           );
         })}
       </ul>
+      {showAll ? null : (
+        <button
+          type="button"
+          onClick={() => setShowAll(true)}
+          className="-ml-2 mt-3 inline-flex min-h-11 items-center gap-2 rounded-full px-2 text-[0.9375rem] font-medium text-moos transition-colors hover:text-moos-tief"
+        >
+          <Plus className="size-4" aria-hidden="true" />
+          Alle {reasons.items.length} Sätze anzeigen
+        </button>
+      )}
 
       <div className="mt-8 grid gap-5 lg:grid-cols-[1.25fr_1fr]">
         <div className="flex min-h-[9.5rem] flex-col justify-center rounded-xl bg-salbei-hell/70 p-6 md:p-8" aria-live="polite">

@@ -56,10 +56,7 @@ export const navigation = [
 ];
 
 export const psychotherapy = {
-  paragraphs: [
-    "Psychotherapie ist ein eigenständiges Heilverfahren im Gesundheitsbereich zur Behandlung von psychischen, psychosozialen oder auch psychosomatisch bedingten Verhaltensstörungen und Leidenszuständen.",
-    "Das Ziel einer Psychotherapie ist es, seelisches Leid zu heilen oder zu lindern, in Lebenskrisen zu helfen, gestörte Verhaltensweisen und Einstellungen zu ändern sowie die persönliche Entwicklung und Gesundheit zu fördern.",
-  ],
+  lead: "Psychotherapie hilft, seelisches Leid zu lindern, Lebenskrisen zu bewältigen und belastende Denk- und Verhaltensmuster zu verändern.",
 };
 
 export const reasons = {
@@ -101,10 +98,7 @@ export const crisis = [
 ];
 
 export const hypnosis = {
-  paragraphs: [
-    "Hypnose ist wie eine Art der Kommunikation, die es einem Menschen ermöglicht, sich in einen induzierten Trancezustand zu begeben. Die Trance ist ein Zustand tiefster Entspannung bei gleichzeitig erhöhter Aufmerksamkeit.",
-    "Während der Trance kommt es zu Veränderungen im Erleben, zur Fokussierung der Aufmerksamkeit, zu einer veränderten Körperwahrnehmung, einem intensiveren Vorstellungsvermögen, zur Aktivierung der inneren Anteile und Ressourcenfindung sowie zu Veränderungen bestimmter körperlicher Vorgänge.",
-  ],
+  lead: "Hypnose führt in einen Zustand tiefer Entspannung bei wacher Aufmerksamkeit. In dieser Trance werden innere Ressourcen leichter zugänglich und belastende Muster lassen sich verändern.",
   effects: ["Senkung der Atemrate", "Verringerte Muskelspannung", "Senkung des Blutdrucks"],
 };
 
@@ -262,6 +256,13 @@ export const about = {
     "Wiener Landesverband für Psychotherapie (WLP)",
     "Vereinigung Österreichischer Psychotherapeutinnen (VÖPP)",
   ],
+  /** Kurzfassung, die sofort sichtbar ist. Der vollständige Werdegang lässt sich aufklappen. */
+  highlights: [
+    "Hypnosepsychotherapie (ÖGATAP)",
+    "Traumatherapie, systemische Paartherapie, Sexualtherapie",
+    "Krisenintervention und Notfallpsychologie (ÖAGG)",
+    "2014–2020 Privatklinik „Woman & Health“",
+  ],
   mediaTitle: "Hypnose zum Nikotinentzug: ORF-Dreh in meiner Praxis",
 };
 
@@ -272,7 +273,7 @@ export const pricing = [
 
 export const subsidy = {
   intro:
-    "Je nach Krankenkasse können Sie einen Kostenzuschuss von € 33,70 bis € 50,20 pro Psychotherapieeinheit (50 Minuten) beantragen, sofern Ihre Psychotherapeutin feststellt, dass eine psychische Krankheit oder eine „krankheitswertige Störung“ vorliegt.",
+    "Je nach Krankenkasse erhalten Sie € 33,70 bis € 50,20 pro Einheit zurück, wenn eine krankheitswertige Störung vorliegt.",
   steps: [
     "Vor der zweiten Psychotherapiesitzung holen Sie eine ärztliche Bestätigung ein.",
     "Nach einigen Sitzungen, überwiegend vor der 11. Sitzung, reichen Sie den Antrag auf Kostenzuschuss bei der Krankenkasse ein. Ihre Psychotherapeutin füllt ihn teilweise aus, die ärztliche Bestätigung legen Sie bei.",

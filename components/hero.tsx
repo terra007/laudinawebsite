@@ -8,7 +8,7 @@ import { MapPin, Phone } from "lucide-react";
 import { BreathingLines } from "@/components/breathing-lines";
 import { SectionArt } from "@/components/section-art";
 import { Button } from "@/components/ui/button";
-import { locations, practice } from "@/lib/site";
+import { locations, practice, pricing } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -167,6 +167,14 @@ export function Hero({
             {practice.phone}
           </a>
         </motion.div>
+
+        {/* Das Wichtigste auf einen Blick: Dauer, Honorar, Kassenzuschuss. */}
+        <motion.p variants={item} className="mt-3 text-[0.9375rem] text-stein md:mt-4">
+          {pricing[0].title} {pricing[0].duration}: {pricing[0].price} · Kostenzuschuss der Krankenkasse möglich ·{" "}
+          <Link href="/#setting" className="text-link">
+            Kosten
+          </Link>
+        </motion.p>
       </motion.div>
     </section>
   );

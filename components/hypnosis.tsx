@@ -20,8 +20,7 @@ export function Hypnosis({ image }: { image: string | null }) {
 
         <Reveal delay={0.12}>
           <h2 className="h-section text-papier">Hypnose</h2>
-          <p className="lead prose-text mt-7 text-kalk">{hypnosis.paragraphs[0]}</p>
-          <p className="prose-text mt-5 text-kalk/80">{hypnosis.paragraphs[1]}</p>
+          <p className="lead prose-text mt-7 text-kalk">{hypnosis.lead}</p>
           <ul className="mt-9 grid max-w-2xl gap-x-8 border-t border-kalk/20 sm:grid-cols-3">
             {hypnosis.effects.map((effect) => (
               <li key={effect} className="border-b border-kalk/20 py-4 font-serif text-[1.2rem] leading-snug sm:border-b-0">
