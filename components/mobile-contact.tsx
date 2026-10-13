@@ -22,7 +22,7 @@ export function MobileContact() {
   }, []);
 
   const base =
-    "flex size-12 items-center justify-center rounded-full shadow-[0_12px_30px_-10px_rgba(82,31,31,0.6)] transition-transform active:scale-95";
+    "flex size-12 items-center justify-center rounded-full shadow-[0_12px_30px_-10px_rgba(43,70,73,0.6)] transition-transform active:scale-95";
   const tabIndex = visible ? undefined : -1;
 
   return (

@@ -37,7 +37,7 @@ export function Hero({ portrait }: { portrait: string | null }) {
         variants={{ hidden: {}, show: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } } }}
       >
         <motion.div variants={item} className="lg:order-2">
-          <div className="relative aspect-[4/5] w-[min(16rem,62vw)] overflow-hidden rounded-[1.5rem_6rem_1.5rem_1.5rem] bg-sand-hell shadow-[0_40px_80px_-50px_rgba(82,31,31,0.6)] md:w-[20rem] lg:ml-auto lg:w-full lg:max-w-[28rem] lg:rounded-[2rem_10rem_2rem_2rem]">
+          <div className="relative aspect-[4/5] w-[min(16rem,62vw)] overflow-hidden rounded-[1.5rem_6rem_1.5rem_1.5rem] bg-sand-hell shadow-[0_40px_80px_-50px_rgba(43,70,73,0.6)] md:w-[20rem] lg:ml-auto lg:w-full lg:max-w-[28rem] lg:rounded-[2rem_10rem_2rem_2rem]">
             {portrait ? (
               <Image
                 src={portrait}

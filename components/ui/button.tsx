@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-moos text-papier hover:bg-moos-tief hover:shadow-[0_10px_30px_-12px_rgba(82,31,31,0.65)]",
+          "bg-moos text-papier hover:bg-moos-tief hover:shadow-[0_10px_30px_-12px_rgba(43,70,73,0.65)]",
         outline: "border border-moos/35 bg-transparent text-moos hover:border-moos hover:bg-salbei-hell/60",
         light: "bg-papier text-moos-tief hover:bg-sand-hell",
         ghost: "text-moos hover:bg-salbei-hell/60",

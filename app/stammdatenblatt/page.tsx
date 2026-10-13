@@ -65,7 +65,7 @@ export default function StammdatenblattPage() {
             </p>
           </div>
 
-          <div className="rounded-xl bg-papier p-6 shadow-[0_30px_80px_-50px_rgba(82,31,31,0.55)] sm:p-9 md:p-12">
+          <div className="rounded-xl bg-papier p-6 shadow-[0_30px_80px_-50px_rgba(43,70,73,0.55)] sm:p-9 md:p-12">
             <StammdatenForm />
           </div>
         </div>
