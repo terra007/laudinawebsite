@@ -27,6 +27,8 @@ export const locations = [
     title: "Praxis Wien",
     place: "Wien",
     short: "Heinrichsgasse 3, 1010 Wien",
+    /** Kurzform für den Einstieg. */
+    badge: { title: "Wien 1010", note: "Heinrichsgasse 3" },
     art: "wien" as const,
     image: "standortWien" as const,
     lines: ["Heinrichsgasse 3, 2. Stock, Tür 18b", "1010 Wien"],
@@ -38,6 +40,7 @@ export const locations = [
     title: "Praxis Niederösterreich",
     place: "Niederösterreich",
     short: "Außer Ort 70, 2031 Eggendorf im Thale",
+    badge: { title: "Eggendorf im Thale", note: "Bezirk Hollabrunn" },
     art: "weinviertel" as const,
     image: "standortNoe" as const,
     lines: ["Außer Ort 70", "2031 Eggendorf im Thale"],

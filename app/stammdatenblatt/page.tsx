@@ -41,8 +41,7 @@ export default function StammdatenblattPage() {
             </h1>
             <p className="mt-2 font-serif text-[1.45rem] text-moos">Psychotherapeutische Praxis</p>
             <p className="mt-7 max-w-[44ch] text-anthrazit">
-              Bitte füllen Sie das Stammdatenblatt vor Ihrem ersten Besuch aus. Sie brauchen dafür etwa drei
-              Minuten.
+              Bitte füllen Sie das Stammdatenblatt vor Ihrer ersten Sitzung aus.
             </p>
 
             <p className="mt-7 flex max-w-[44ch] gap-3 text-[0.9375rem] leading-snug text-stein">

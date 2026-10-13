@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone } from "lucide-react";
 
 import { SectionArt } from "@/components/section-art";
-import { practice } from "@/lib/site";
+import { locations, practice } from "@/lib/site";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -65,12 +65,30 @@ export function Hero({ portrait }: { portrait: string | null }) {
             ))}
           </motion.ul>
 
-          <motion.p variants={item} className="mt-5 flex items-start gap-2 text-[0.9375rem] text-stein md:text-[1rem]">
-            <MapPin className="mt-[0.2em] size-[1em] shrink-0 text-moos" aria-hidden="true" />
-            <Link href="/#kontakt" className="hover:text-moos-tief">
-              Praxen in Wien 1010 und Eggendorf im Thale
-            </Link>
-          </motion.p>
+          {/* Beide Praxen auf einen Blick; ein Tipp öffnet Google Maps. */}
+          <motion.div variants={item} className="mt-8">
+            <p className="text-[0.8125rem] uppercase tracking-[0.14em] text-stein">Zwei Praxen</p>
+            <ul className="mt-3 flex flex-wrap gap-3">
+              {locations.map((location) => (
+                <li key={location.id}>
+                  <a
+                    href={location.mapHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex items-center gap-3 rounded-2xl bg-papier py-3 pl-3 pr-5 ring-1 ring-linie transition-shadow hover:ring-salbei"
+                  >
+                    <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-salbei-hell text-moos transition-colors group-hover:bg-moos group-hover:text-papier">
+                      <MapPin className="size-[1.1rem]" aria-hidden="true" />
+                    </span>
+                    <span className="leading-tight">
+                      <span className="block font-serif text-[1.15rem] text-anthrazit">{location.badge.title}</span>
+                      <span className="mt-0.5 block text-[0.875rem] text-stein">{location.badge.note}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
 
           <motion.a
             variants={item}

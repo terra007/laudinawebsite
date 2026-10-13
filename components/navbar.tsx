@@ -34,7 +34,7 @@ export function Navbar({ solid = false }: { solid?: boolean }) {
         {/* Name als Home-Button, immer sichtbar. */}
         <Link href="/" className="group flex flex-col leading-none" aria-label={`${practice.name}, Startseite`}>
           <span className="text-[0.8125rem] text-stein">Mag. phil.</span>
-          <span className="mt-0.5 font-serif text-[1.35rem] tracking-[-0.01em] text-anthrazit transition-colors group-hover:text-moos">
+          <span className="mt-0.5 whitespace-nowrap font-serif text-[1.15rem] tracking-[-0.01em] text-anthrazit transition-colors group-hover:text-moos sm:text-[1.35rem]">
             {practice.shortName}
           </span>
         </Link>
