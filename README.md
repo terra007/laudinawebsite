@@ -16,12 +16,12 @@ Benötigt Node.js 20.9 oder neuer.
 
 | Ort | Inhalt |
 | --- | --- |
-| `lib/site.ts` | Alle Texte und Daten: Kontakt, Standorte, 18 Gründe, Schwerpunkte, Ausbildung, Honorar, Kostenzuschuss |
+| `lib/site.ts` | Alle Texte und Daten: Kontakt, Standorte, Schwerpunkte, Spezialisierungen, Ausbildung, Honorar, Kostenzuschuss |
 | `app/page.tsx` | Startseite, setzt die Bereiche zusammen |
 | `app/stammdatenblatt` | Stammdatenblatt als Formular |
 | `app/impressum` | Verschwiegenheit, Datenschutz, Impressum |
 | `app/api` | Versand von Kontaktformular und Stammdatenblatt |
-| `components` | `navbar`, `hero`, `psychotherapy`, `reasons-check`, `hypnosis`, `services-grid`, `about`, `pricing-cards`, `contact`, `contact-form`, `stammdaten-form`, `signature-pad`, `footer` |
+| `components` | `navbar`, `hero`, `psychotherapy`, `hypnosis`, `services-grid`, `about`, `pricing-cards`, `contact`, `contact-form`, `stammdaten-form`, `signature-pad`, `mobile-contact`, `footer` |
 | `components/ui` | shadcn/ui-Bausteine (Button, Input, Dialog …); weitere mit `npx shadcn@latest add <name>` |
 | `app/globals.css` | Farben, Schriften, Typografie |
 
@@ -63,11 +63,21 @@ strukturierten Daten (Therapeutin, beide Standorte, Honorar). Das Vorschaubild
 für geteilte Links ist `app/opengraph-image.png`. `sitemap.xml` und
 `robots.txt` entstehen automatisch.
 
-## Vor dem Livegang
+## Hosting
 
-- Datenschutzerklärung prüfen lassen (Abschnitte mit `GEÄNDERT` in `app/impressum/page.tsx`)
-- Zuschussbeträge der Krankenkassen prüfen (Quelle laut alter Website: Stand 2020)
-- Notfallnummern im Bereich „18 Gründe“ mit der Praxis abstimmen (neu ergänzt)
-- SMTP-Zugang eintragen und beide Formulare einmal durchsenden
+Die Seite läuft auf Vercel (`vercel.json` legt Next.js als Framework fest). Die
+Domain pongracz-psychotherapie.com liegt bei IONOS; dort zeigen die A-Einträge für
+`@` und `www` auf Vercel, die E-Mail-Einträge bleiben bei IONOS. Die SMTP-Daten
+stehen in Vercel unter Environment Variables.
+
+`public/runtime-service-worker.js` löst den Service Worker der alten
+IONOS-Website ab und kann entfernt werden, wenn die alte Seite lange genug
+offline ist (einige Monate).
+
+## Offene Punkte
+
+- Impressum und Datenschutz von einer Fachstelle bestätigen lassen (`app/impressum/page.tsx`)
+- Zuschussbetrag der KFA prüfen (Quelle laut alter Website: Stand 2020)
+- Beide Formulare nach dem Eintragen der SMTP-Daten einmal durchsenden
 - Website in der Google Search Console anmelden und `sitemap.xml` einreichen
 - Google-Unternehmensprofil für beide Standorte anlegen oder prüfen (gleiche Schreibweise von Name, Adresse, Telefon)

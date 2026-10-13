@@ -26,7 +26,8 @@ export async function sendMail(message: {
   });
 
   await transport.sendMail({
-    from: process.env.MAIL_FROM ?? process.env.SMTP_USER,
+    // `||` statt `??`: ein leeres MAIL_FROM aus .env.example soll auf SMTP_USER zurückfallen.
+    from: process.env.MAIL_FROM || process.env.SMTP_USER,
     to: process.env.MAIL_TO,
     ...message,
   });
