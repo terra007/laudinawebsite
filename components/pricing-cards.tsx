@@ -41,11 +41,8 @@ export function PricingCards() {
         <Reveal className="mt-4">
           <div className="flex flex-wrap items-center justify-between gap-6 rounded-xl bg-moos p-8 text-papier md:p-10">
             <div className="max-w-[52ch]">
-              <h3 className="font-serif text-[1.6rem] leading-tight">Vor Ihrem ersten Besuch</h3>
-              <p className="mt-2 text-papier/85">
-                Bitte füllen Sie das Stammdatenblatt aus. Das geht direkt hier auf der Website, in wenigen
-                Minuten.
-              </p>
+              <h3 className="font-serif text-[1.6rem] leading-tight">Vor Ihrer ersten Sitzung</h3>
+              <p className="mt-2 text-papier/85">Bitte füllen Sie das Stammdatenblatt aus.</p>
             </div>
             <Button asChild variant="light" size="lg">
               <Link href="/stammdatenblatt">
