@@ -61,8 +61,9 @@ export const psychotherapy = {
 };
 
 export const hypnosis = {
-  lead: "Hypnose führt in einen Zustand tiefer Entspannung bei wacher Aufmerksamkeit. In dieser Trance werden innere Ressourcen leichter zugänglich und belastende Muster lassen sich verändern.",
-  effects: ["Senkung der Atemrate", "Verringerte Muskelspannung", "Senkung des Blutdrucks"],
+  lead: "Die Hypnosepsychotherapie arbeitet mit veränderten Bewusstseinszuständen und nutzt das Potenzial, das in jedem Menschen liegt. In der Trance, einem natürlichen Zustand nach innen gerichteter Aufmerksamkeit, wachsen Gelassenheit, Sicherheit und Kraft.",
+  note: "Als tiefenpsychologisches Verfahren hilft sie, frühere Erlebnisse und Traumata zu verarbeiten; ihre Wirkung auf Psyche und Körper ist wissenschaftlich gut belegt. Grundlage ist eine vertrauensvolle therapeutische Beziehung, den Ablauf stimmen wir gemeinsam ab.",
+  helpsWith: ["Ängste", "Depressionen", "Traumata", "Psychosomatische Beschwerden", "Essstörungen", "Chronische Leiden"],
 };
 
 export type Focus = {
