@@ -58,7 +58,7 @@ function FocusCard({ area, featured }: { area: Focus; featured: boolean }) {
     <article
       id={`schwerpunkt-${area.id}`}
       className={cn(
-        "group flex h-full flex-col rounded-xl bg-papier p-7 transition-[transform,box-shadow] duration-500 ease-out hover:scale-[1.012] hover:shadow-[0_0_0_1px_var(--salbei),0_26px_60px_-24px_rgba(68,86,74,0.55)] md:p-8",
+        "group flex h-full flex-col rounded-xl bg-papier p-7 transition-[transform,box-shadow] duration-500 ease-out hover:scale-[1.012] hover:shadow-[0_0_0_1px_var(--salbei),0_26px_60px_-24px_rgba(110,39,39,0.55)] md:p-8",
         featured ? "lg:flex-row lg:items-start lg:gap-8" : "sm:min-h-[21.5rem]",
       )}
     >
@@ -131,7 +131,7 @@ export function ServicesGrid({ hasOrfVideo }: { hasOrfVideo: boolean }) {
             const Icon = icons[area.icon];
             return (
               <RevealItem key={area.id}>
-                <div className="flex h-full items-start gap-4 rounded-xl border border-sand bg-kalk/60 p-5 transition-[transform,box-shadow,background-color] duration-500 ease-out hover:scale-[1.015] hover:bg-papier hover:shadow-[0_0_0_1px_var(--salbei),0_20px_44px_-24px_rgba(68,86,74,0.5)]">
+                <div className="flex h-full items-start gap-4 rounded-xl border border-sand bg-kalk/60 p-5 transition-[transform,box-shadow,background-color] duration-500 ease-out hover:scale-[1.015] hover:bg-papier hover:shadow-[0_0_0_1px_var(--salbei),0_20px_44px_-24px_rgba(110,39,39,0.5)]">
                   <Icon className="mt-0.5 size-[1.35rem] shrink-0 text-moos" strokeWidth={1.6} aria-hidden="true" />
                   <div>
                     <h3 className="hyphens-auto font-serif text-[1.2rem] leading-snug text-anthrazit">{area.title}</h3>

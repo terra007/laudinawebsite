@@ -2,22 +2,23 @@
 @import "tw-animate-css";
 
 /*
- * Farbwelt der Praxis: Salbei, Sand, gedecktes Weiß, Anthrazit.
+ * Farbwelt der Praxis, übernommen von der bisherigen Website: Bordeaux, Altrosa,
+ * Sand, warmes Weiß. Die Token-Namen (moos, salbei …) stammen aus der ersten Fassung.
  * Die Sandformen greifen die Flächen des gedruckten Stammdatenblatts auf.
  */
 :root {
-  --kalk: #f2f3ee; /* gedecktes Weiß, Grundfläche */
-  --papier: #fafaf6; /* Karten, Formulare */
-  --sand: #e3d8c4;
-  --sand-hell: #eee8dc;
-  --salbei: #93a38c;
-  --salbei-hell: #dde4d7;
-  --moos: #44564a; /* tiefes Salbei für Aktionen */
-  --moos-tief: #2f3d35; /* dunkle Flächen */
-  --anthrazit: #2f3533; /* Text, kein hartes Schwarz */
-  --stein: #5e6764; /* Sekundärtext */
-  --linie: #d5d8cf;
-  --fehler: #9b3d33;
+  --kalk: #f8f6f1; /* gedecktes Weiß, Grundfläche */
+  --papier: #fffdf9; /* Karten, Formulare */
+  --sand: #e0d8c1;
+  --sand-hell: #ede7d8;
+  --salbei: #ad8484;
+  --salbei-hell: #eadcdc;
+  --moos: #6e2727; /* Bordeaux für Aktionen */
+  --moos-tief: #521f1f; /* dunkle Flächen */
+  --anthrazit: #333344; /* Text, kein hartes Schwarz */
+  --stein: #6b5a5a; /* Sekundärtext */
+  --linie: #ddd3cc;
+  --fehler: #b3261e;
 
   /* shadcn/ui Tokens */
   --background: var(--kalk);
@@ -36,7 +37,7 @@
   --accent-foreground: var(--moos-tief);
   --destructive: var(--fehler);
   --border: var(--linie);
-  --input: #c4c9bd;
+  --input: #cbbfb8;
   --ring: var(--salbei);
   --radius: 0.875rem;
 }

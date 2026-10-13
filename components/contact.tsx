@@ -77,7 +77,7 @@ export function Contact() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="rounded-xl bg-papier p-7 shadow-[0_30px_80px_-50px_rgba(47,61,53,0.55)] md:p-10">
+          <div className="rounded-xl bg-papier p-7 shadow-[0_30px_80px_-50px_rgba(82,31,31,0.55)] md:p-10">
             <h3 className="font-serif text-[1.7rem] leading-tight">Ihre Nachricht an mich</h3>
             <ContactForm />
           </div>

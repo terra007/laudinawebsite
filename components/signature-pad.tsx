@@ -13,7 +13,7 @@ export type SignatureHandle = {
   toPng: () => Promise<Uint8Array | null>;
 };
 
-const INK = "#2f3533";
+const INK = "#333344";
 
 function dataUrlToBytes(url: string) {
   const binary = atob(url.split(",")[1]);

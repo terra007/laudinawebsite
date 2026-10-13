@@ -43,14 +43,14 @@ export function Hero({
               playsInline
               preload="metadata"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(100deg,var(--kalk)_8%,rgba(242,243,238,0.82)_42%,rgba(242,243,238,0.25)_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(100deg,var(--kalk)_8%,rgba(248,246,241,0.82)_42%,rgba(248,246,241,0.25)_100%)]" />
             <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-kalk to-transparent" />
           </>
         ) : poster ? (
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={poster} alt="" className="size-full object-cover" />
-            <div className="absolute inset-0 bg-[linear-gradient(100deg,var(--kalk)_8%,rgba(242,243,238,0.82)_42%,rgba(242,243,238,0.25)_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(100deg,var(--kalk)_8%,rgba(248,246,241,0.82)_42%,rgba(248,246,241,0.25)_100%)]" />
           </>
         ) : (
           <>
@@ -113,7 +113,7 @@ export function Hero({
                   <Link href="/#kontakt" className="group block rounded-xl">
                     <div
                       className={cn(
-                        "relative overflow-hidden bg-sand-hell shadow-[0_30px_70px_-40px_rgba(47,61,53,0.7)] transition-transform duration-700 ease-out group-hover:scale-[1.02] aspect-[5/4] sm:aspect-[4/5] [@media(max-height:820px)]:lg:aspect-square",
+                        "relative overflow-hidden bg-sand-hell shadow-[0_30px_70px_-40px_rgba(82,31,31,0.7)] transition-transform duration-700 ease-out group-hover:scale-[1.02] aspect-[5/4] sm:aspect-[4/5] [@media(max-height:820px)]:lg:aspect-square",
                         index === 0
                           ? "rounded-[3.5rem_1rem_1rem_1rem] md:rounded-[7rem_1.5rem_1.5rem_1.5rem]"
                           : "rounded-[1rem_3.5rem_1rem_1rem] md:rounded-[1.5rem_7rem_1.5rem_1.5rem]",
