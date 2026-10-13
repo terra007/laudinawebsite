@@ -12,7 +12,6 @@ import { Psychotherapy } from "@/components/psychotherapy";
 import { ServicesGrid } from "@/components/services-grid";
 import { media } from "@/lib/media";
 import { seo, structuredData } from "@/lib/seo";
-import { locations } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: { absolute: seo.title },
@@ -28,11 +27,7 @@ export default function Home() {
     <>
       <Navbar />
       <main id="inhalt">
-        <Hero
-          video={media("heroVideo")}
-          poster={media("heroPoster")}
-          locationImages={Object.fromEntries(locations.map((location) => [location.id, media(location.image)]))}
-        />
+        <Hero portrait={portrait} />
         <Psychotherapy image={media("therapie")} />
         <Hypnosis image={media("hypnose")} />
         <ServicesGrid hasOrfVideo={Boolean(orfVideo)} />

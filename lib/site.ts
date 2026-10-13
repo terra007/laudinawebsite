@@ -60,44 +60,6 @@ export const psychotherapy = {
   lead: "Psychotherapie hilft, seelisches Leid zu lindern, Lebenskrisen zu bewältigen und belastende Denk- und Verhaltensmuster zu verändern.",
 };
 
-export const reasons = {
-  title: "18 Gründe, Psychotherapie aufzusuchen",
-  intro: "Psychotherapie ist sinnvoll, wenn einer der folgenden Sätze zutrifft.",
-  source: "Quelle: Österreichischer Bundesverband für Psychotherapie",
-  items: [
-    "Ich bekomme rasendes Herzklopfen und Angst, dass ich sterben muss.",
-    "Ich fühle mich krank und es gibt keinen medizinischen Befund.",
-    "Ich vermeide es, bestimmte Dinge zu tun, die ich gerne tun würde.",
-    "Ich habe Probleme beim Ein- und Durchschlafen.",
-    "Ich plage mich oft mit Gedanken, von denen ich glaube, dass ich mit niemandem darüber reden kann.",
-    "Ich habe Angst vor dem Kontakt zu Mitmenschen, vor großen Plätzen, vor engen Räumen, vor Autoritäten, vor bestimmten Tieren.",
-    "Ich fühle mich lustlos, erschöpft und ständig überfordert.",
-    "Ich befinde mich in einer belastenden Umbruchsituation (Tod einer nahestehenden Person, Arbeitslosigkeit, Scheidung, Trennung, Unfälle).",
-    "Ich bin oft niedergeschlagen und habe keine Freude am Leben.",
-    "Ich denke manchmal an Selbstmord.",
-    "Ich lebe in einer schwierigen Beziehung, sie nimmt mir die Luft zum Atmen.",
-    "Ich bin süchtig (nach Alkohol, Drogen, Essen, Hunger, Liebe, Spiel).",
-    "Ich kann ohne bestimmte Rituale nicht leben, obwohl diese mein Leben sehr einengen.",
-    "Ich möchte mein Entwicklungspotential besser ausschöpfen und weiß nicht, wie.",
-    "Ich möchte meine Beziehungen verbessern und brauche dazu Rückmeldungen über meine Stärken und Schwächen.",
-    "Meine Kinder brauchen meine Unterstützung und ich fühle mich dabei oft überfordert.",
-    "Ich komme mit meiner Sexualität nicht zurecht.",
-    "Ich kann mich oft nicht entscheiden und das quält mich.",
-  ],
-};
-
-/** Notfallnummern in Österreich, ergänzend zur Liste der 18 Gründe. */
-export const crisis = [
-  { label: "Telefonseelsorge", number: "142", href: "tel:142", note: "rund um die Uhr, kostenlos" },
-  {
-    label: "Psychiatrische Soforthilfe Wien",
-    number: "01 31330",
-    href: "tel:+43131330",
-    note: "rund um die Uhr",
-  },
-  { label: "Rettung", number: "144", href: "tel:144", note: "bei akuter Gefahr" },
-];
-
 export const hypnosis = {
   lead: "Hypnose führt in einen Zustand tiefer Entspannung bei wacher Aufmerksamkeit. In dieser Trance werden innere Ressourcen leichter zugänglich und belastende Muster lassen sich verändern.",
   effects: ["Senkung der Atemrate", "Verringerte Muskelspannung", "Senkung des Blutdrucks"],

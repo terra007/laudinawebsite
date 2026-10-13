@@ -1,9 +1,8 @@
 import Image from "next/image";
 
-import { ReasonsCheck } from "@/components/reasons-check";
 import { Reveal } from "@/components/reveal";
 import { SectionArt } from "@/components/section-art";
-import { psychotherapy, reasons } from "@/lib/site";
+import { psychotherapy } from "@/lib/site";
 
 export function Psychotherapy({ image }: { image: string | null }) {
   return (
@@ -24,19 +23,6 @@ export function Psychotherapy({ image }: { image: string | null }) {
             </div>
           </Reveal>
         </div>
-
-        <Reveal className="mt-16 md:mt-24">
-          <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-4">
-            <div>
-              <h3 className="font-serif text-[clamp(1.6rem,2.6vw,2.2rem)] leading-tight">{reasons.title}</h3>
-              <p className="mt-3 max-w-[52ch] text-stein">{reasons.intro}</p>
-            </div>
-            <p className="text-[0.875rem] text-stein">{reasons.source}</p>
-          </div>
-          <div className="mt-8 border-t border-linie">
-            <ReasonsCheck />
-          </div>
-        </Reveal>
       </div>
     </section>
   );

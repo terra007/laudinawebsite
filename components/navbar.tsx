@@ -31,7 +31,16 @@ export function Navbar({ solid = false }: { solid?: boolean }) {
       )}
     >
       <div className="wrap flex h-[4.5rem] items-center justify-between gap-6">
-        <Link href="/" className="group flex flex-col leading-none" aria-label={`${practice.name}, Startseite`}>
+        {/* Auf der Startseite steht der Name groß im Kopfbereich; hier erscheint er erst beim Scrollen. */}
+        <Link
+          href="/"
+          className={cn(
+            "group flex flex-col leading-none transition-opacity duration-500",
+            filled ? "opacity-100" : "pointer-events-none opacity-0",
+          )}
+          aria-label={`${practice.name}, Startseite`}
+          tabIndex={filled ? undefined : -1}
+        >
           <span className="font-serif text-[1.35rem] tracking-[-0.01em] text-anthrazit">{practice.shortName}</span>
           <span className="mt-1 text-[0.8125rem] text-stein">Psychotherapie in Wien</span>
         </Link>
@@ -49,7 +58,13 @@ export function Navbar({ solid = false }: { solid?: boolean }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button asChild size="sm" className="hidden sm:inline-flex">
+          {/* Erscheint erst beim Scrollen, damit der Einstieg ruhig bleibt. */}
+          <Button
+            asChild
+            size="sm"
+            className={cn("hidden transition-opacity duration-500 sm:inline-flex", filled ? "opacity-100" : "pointer-events-none opacity-0")}
+            tabIndex={filled ? undefined : -1}
+          >
             <Link href="/#kontakt">Erstgespräch vereinbaren</Link>
           </Button>
           {/* Am Handy: Signal, SMS und Anruf direkt in der Kopfzeile. */}
