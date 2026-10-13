@@ -22,14 +22,6 @@ export function Hypnosis({ image }: { image: string | null }) {
           <h2 className="h-section text-papier">Hypnose</h2>
           <p className="lead prose-text mt-7 text-kalk">{hypnosis.lead}</p>
           <p className="prose-text mt-5 text-kalk/80">{hypnosis.note}</p>
-          <p className="mt-9 text-[0.9375rem] text-kalk/70">Hilft unter anderem bei</p>
-          <ul className="mt-3 grid max-w-2xl grid-cols-2 gap-x-8 border-t border-kalk/20 sm:grid-cols-3">
-            {hypnosis.helpsWith.map((entry) => (
-              <li key={entry} className="border-b border-kalk/20 py-3 font-serif text-[1.15rem] leading-snug">
-                {entry}
-              </li>
-            ))}
-          </ul>
         </Reveal>
       </div>
     </section>
