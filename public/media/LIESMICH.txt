@@ -1,0 +1,19 @@
+Medienplätze der Website
+========================
+
+Liegt eine Datei mit einem dieser Namen in diesem Ordner, verwendet die
+Website sie automatisch. Fehlt sie, zeigt die Seite ihre gezeichnete Variante.
+
+  hero.mp4               Hintergrundvideo im Kopfbereich (16:9, ohne Ton, 5-10 s, als Schleife)
+  hero-poster.jpg        Standbild zum Hero-Video (wird auch ohne Video verwendet)
+  therapie.jpg           Bild im Bereich Psychotherapie (Hochformat 4:5)
+  hypnose.jpg            Bild im Bereich Hypnose (Hochformat 4:5)
+  portrait.jpg           Porträtfoto für "Über mich" (Hochformat 4:5)
+  standort-wien.jpg      Foto des Standorts Wien im Kopfbereich (Hochformat 4:5)
+  standort-noe.jpg       Foto des Standorts Eggendorf im Thale im Kopfbereich (Hochformat 4:5)
+  orf-nikotinentzug.mp4  ORF-Beitrag; blendet den Bereich "Medien" ein
+  orf-nikotinentzug.jpg  Standbild zum ORF-Beitrag
+
+hero.mp4, hero-poster.jpg, therapie.jpg und hypnose.jpg erzeugt
+`npm run media` über Higgsfield. Porträt und ORF-Beitrag stammen von der
+bisherigen Website und müssen von Hand hierher kopiert werden.
