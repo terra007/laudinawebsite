@@ -191,7 +191,7 @@ export const about = {
     "Hypnosystemische Aufstellungen (Gunther Schmidt)",
     "Traumatherapie, Curriculum Wien, VÖPP",
   ],
-  experience: ["2014–2020 in der Privatklinik „Woman & Health“ tätig"],
+  experience: ["Seit 2013 selbstständig in freier Praxis", "2014–2020 in der Privatklinik „Woman & Health“ tätig"],
   internships: [
     "Psychiatrische Station im Kardinal Schwarzenberg Klinikum in Schwarzach/Pongau",
     "Psychiatrische Station, Wiener AKH",
