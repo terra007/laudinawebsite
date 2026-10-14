@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Dialog as DialogPrimitive } from "radix-ui";
 import { Menu, MessageSquareText, Phone, X } from "lucide-react";
 
@@ -22,6 +23,15 @@ export function Navbar({ solid = false }: { solid?: boolean }) {
   }, []);
 
   const filled = solid || scrolled;
+  const pathname = usePathname();
+
+  // Auf der Startseite lädt ein Link auf "/" nicht neu; also selbst nach oben scrollen und den Anker entfernen.
+  const toTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname !== "/") return;
+    event.preventDefault();
+    window.history.replaceState(null, "", "/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <header
@@ -32,7 +42,7 @@ export function Navbar({ solid = false }: { solid?: boolean }) {
     >
       <div className="wrap flex h-[4.5rem] items-center justify-between gap-6">
         {/* Name als Home-Button, immer sichtbar. */}
-        <Link href="/" className="group flex flex-col leading-none" aria-label={`${practice.name}, Startseite`}>
+        <Link href="/" onClick={toTop} className="group flex flex-col leading-none" aria-label={`${practice.name}, Startseite`}>
           <span className="text-[0.8125rem] text-stein">Mag. phil.</span>
           <span className="mt-0.5 whitespace-nowrap font-serif text-[1.15rem] tracking-[-0.01em] text-anthrazit transition-colors group-hover:text-moos sm:text-[1.35rem]">
             {practice.shortName}

@@ -105,12 +105,16 @@ export function StammdatenForm() {
   const [today, setToday] = React.useState("");
   const [file, setFile] = React.useState<File | null>(null);
   const [canShare, setCanShare] = React.useState(false);
+  const [otherInsurer, setOtherInsurer] = React.useState(false);
+  // Höchstwert für das Datumsfeld; begrenzt nebenbei das Jahr auf vier Stellen.
+  const [maxDate, setMaxDate] = React.useState("9999-12-31");
   const signature = React.useRef<SignatureHandle>(null);
   const formRef = React.useRef<HTMLFormElement>(null);
   const resultRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     setToday(new Intl.DateTimeFormat("de-AT", { day: "2-digit", month: "2-digit", year: "numeric" }).format(new Date()));
+    setMaxDate(new Date().toISOString().slice(0, 10));
   }, []);
 
   const bind = (name: keyof Values) => ({
@@ -242,7 +246,7 @@ export function StammdatenForm() {
 
         <div className="grid gap-5 sm:grid-cols-2">
           <Field id="sd-geburtsdatum" label="Geburtsdatum" error={errors.geburtsdatum}>
-            <Input {...bind("geburtsdatum")} type="date" autoComplete="bday" />
+            <Input {...bind("geburtsdatum")} type="date" min="1900-01-01" max={maxDate} autoComplete="bday" />
           </Field>
           <Field id="sd-svnr" label="SV-Nr." optional hint="10 Ziffern, zum Beispiel 1234 010190" error={errors.svnr}>
             <Input {...bind("svnr")} inputMode="numeric" autoComplete="off" />
@@ -250,12 +254,38 @@ export function StammdatenForm() {
         </div>
 
         <Field id="sd-krankenkasse" label="Krankenkasse" optional>
-          <Input {...bind("krankenkasse")} list="sd-kassen" autoComplete="off" />
-          <datalist id="sd-kassen">
-            {insurers.map((insurer) => (
-              <option key={insurer} value={insurer} />
-            ))}
-          </datalist>
+          <div role="radiogroup" aria-label="Krankenkasse" className="flex flex-wrap gap-2">
+            {[...insurers, "Andere"].map((option) => {
+              const other = option === "Andere";
+              const active = other ? otherInsurer : !otherInsurer && values.krankenkasse === option;
+              return (
+                <button
+                  key={option}
+                  type="button"
+                  role="radio"
+                  aria-checked={active}
+                  onClick={() => {
+                    setOtherInsurer(other);
+                    setValues((current) => ({
+                      ...current,
+                      krankenkasse: other ? "" : current.krankenkasse === option ? "" : option,
+                    }));
+                  }}
+                  className={cn(
+                    "min-h-11 rounded-full border px-4 text-[0.9375rem] transition-colors",
+                    active
+                      ? "border-moos bg-moos text-papier"
+                      : "border-input bg-papier text-anthrazit hover:border-salbei",
+                  )}
+                >
+                  {option}
+                </button>
+              );
+            })}
+          </div>
+          {otherInsurer ? (
+            <Input {...bind("krankenkasse")} placeholder="Name der Krankenkasse" autoComplete="off" className="mt-1" />
+          ) : null}
         </Field>
 
         <Field id="sd-adresse" label="Adresse" error={errors.adresse}>

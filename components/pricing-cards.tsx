@@ -28,7 +28,7 @@ export function PricingCards() {
                   ) : null}
                 </div>
                 {offer.price ? (
-                  <p className="mt-12 font-serif text-[clamp(2.8rem,5vw,4rem)] font-light leading-none tracking-[-0.02em] text-moos-tief">
+                  <p className="mt-8 font-serif text-[clamp(2rem,3.2vw,2.6rem)] font-light leading-none tracking-[-0.01em] text-moos-tief">
                     {offer.price}
                   </p>
                 ) : null}
@@ -79,7 +79,7 @@ export function PricingCards() {
                       <span className="font-medium text-anthrazit">{fund.short}</span>
                       <span className="block text-[0.9375rem] leading-snug text-stein">{fund.name}</span>
                     </dt>
-                    <dd className="whitespace-nowrap font-serif text-[1.5rem] tabular-nums text-moos-tief">
+                    <dd className="whitespace-nowrap font-serif text-[1.25rem] tabular-nums text-moos-tief">
                       {fund.amount}
                     </dd>
                   </div>
