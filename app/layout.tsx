@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", title: seo.title, description: seo.description },
   robots: { index: true, follow: true, googleBot: { "max-image-preview": "large", "max-snippet": -1 } },
+  // Bestätigungscode der Google Search Console, in Vercel als GOOGLE_SITE_VERIFICATION hinterlegt.
+  verification: process.env.GOOGLE_SITE_VERIFICATION ? { google: process.env.GOOGLE_SITE_VERIFICATION } : undefined,
 };
 
 export const viewport: Viewport = {
