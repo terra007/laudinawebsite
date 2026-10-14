@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 import "@fontsource-variable/newsreader/opsz.css";
 import "@fontsource-variable/newsreader/opsz-italic.css";
@@ -52,6 +53,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Zum Inhalt springen
         </a>
         <Providers>{children}</Providers>
+        {/* Anonyme Besucherstatistik ohne Cookies, siehe Datenschutzerklärung. */}
+        <Analytics />
       </body>
     </html>
   );

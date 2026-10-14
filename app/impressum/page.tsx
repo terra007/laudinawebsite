@@ -104,9 +104,16 @@ export default function ImpressumPage() {
 
               <h3>Cookies und Analyse</h3>
               <p>
-                Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Dienste. Schriften und
-                Skripte werden vom eigenen Server geladen. Google Maps und Signal öffnen sich erst, wenn Sie den
-                jeweiligen Link anklicken.
+                Diese Website setzt keine Cookies und verwendet keine Tracking-Dienste. Schriften und Skripte werden
+                vom eigenen Server geladen. Google Maps und Signal öffnen sich erst, wenn Sie den jeweiligen Link
+                anklicken.
+              </p>
+              <p>
+                Für eine anonyme Besucherstatistik nutze ich Vercel Web Analytics. Dabei werden keine Cookies gesetzt,
+                nichts auf Ihrem Gerät gespeichert und keine Personen wiedererkannt: Erfasst werden nur aufgerufene
+                Seiten, Herkunftsland, Gerätetyp und die verweisende Seite, zusammengefasst ohne Bezug zu Ihrer Person.
+                Rechtsgrundlage ist mein berechtigtes Interesse an der Verbesserung der Website (Art. 6 Abs. 1 lit. f
+                DSGVO).
               </p>
 
               <h3>Ihre Rechte</h3>
