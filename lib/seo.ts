@@ -4,7 +4,7 @@ import { about, focusAreas, locations, practice, pricing } from "@/lib/site";
 export const seo = {
   title: "Psychotherapie & Hypnose in Wien 1010 | Mag. Laudina Pongrácz",
   description:
-    "Psychotherapeutin in Wien 1010 und Eggendorf im Thale: Hypnosepsychotherapie, Traumatherapie, Paartherapie, Krisenintervention. Erstgespräch: +43 676 56 23 337.",
+    "Einfühlsame Psychotherapie & Hypnose in Wien 1010 und Eggendorf im Thale. Hilfe bei Angst, Depression, Trauma und Beziehungskrisen. Erstgespräch vereinbaren.",
   siteName: "Psychotherapie Laudina Pongrácz",
 };
 
