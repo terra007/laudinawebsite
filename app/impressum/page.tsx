@@ -82,24 +82,36 @@ export default function ImpressumPage() {
               <h3>Stammdatenblatt online</h3>
               <p>
                 Wenn Sie das Stammdatenblatt auf dieser Website ausfüllen, wird aus Ihren Angaben und Ihrer
-                Unterschrift in Ihrem Browser ein PDF erstellt. Beim Senden wird dieses PDF per E-Mail an die Praxis
-                übermittelt. Auf dem Webserver wird es nicht gespeichert.
+                Unterschrift in Ihrem Browser ein PDF erstellt. Beim Senden wird dieses PDF verschlüsselt (HTTPS) an
+                den Webserver und von dort per E-Mail an die Praxis übermittelt. Auf dem Webserver wird es nicht
+                gespeichert. Rechtsgrundlage ist die Vorbereitung und Durchführung der Behandlung (Art. 6 Abs. 1 lit. b
+                und Art. 9 Abs. 2 lit. h DSGVO).
               </p>
 
               <h3>Datenspeicherung</h3>
               <p>
                 Für Behandlung und Abrechnung speichere ich Vor- und Zuname, Adresse, Geburtsdatum, Telefonnummer,
                 E-Mail-Adresse und gegebenenfalls Ihre Sozialversicherungsdaten. Ich bewahre sie so lange auf, wie es
-                die gesetzlichen Dokumentations- und Aufbewahrungspflichten verlangen. Eine Weitergabe an Dritte
-                erfolgt nur mit Ihrer Zustimmung oder wenn ein Gesetz sie vorschreibt.
+                die gesetzlichen Pflichten verlangen, insbesondere die Dokumentationspflicht nach dem
+                Psychotherapiegesetz 2024 und die steuerliche Aufbewahrungspflicht von sieben Jahren (§ 132 BAO).
+                Anfragen, aus denen keine Behandlung entsteht, lösche ich, sobald sie erledigt sind. Eine Weitergabe an
+                Dritte erfolgt nur mit Ihrer Zustimmung oder wenn ein Gesetz sie vorschreibt.
               </p>
 
               <h3>Hosting und Server-Protokolle</h3>
               <p>
                 Diese Website wird bei Vercel Inc. (USA) betrieben. Beim Aufruf der Seiten verarbeitet der Server
                 technisch notwendige Daten wie IP-Adresse, Zeitpunkt und aufgerufene Seite, um die Website sicher
-                auszuliefern (Art. 6 Abs. 1 lit. f DSGVO). Vercel ist nach dem EU-US Data Privacy Framework
-                zertifiziert.
+                auszuliefern (Art. 6 Abs. 1 lit. f DSGVO). Diese Protokolle werden nach kurzer Zeit automatisch
+                gelöscht. Die Übermittlung in die USA stützt sich auf die Zertifizierung von Vercel nach dem EU-US
+                Data Privacy Framework (Angemessenheitsbeschluss nach Art. 45 DSGVO).
+              </p>
+
+              <h3>Dienstleister</h3>
+              <p>
+                Für den Betrieb setze ich Auftragsverarbeiter ein, mit denen Verträge nach Art. 28 DSGVO bestehen:
+                Vercel Inc. (Hosting der Website, USA) und IONOS SE (E-Mail-Postfach der Praxis, Deutschland). Nachrichten
+                aus dem Kontaktformular und das Stammdatenblatt werden über das E-Mail-Postfach bei IONOS zugestellt.
               </p>
 
               <h3>Cookies und Analyse</h3>
@@ -119,7 +131,8 @@ export default function ImpressumPage() {
               <h3>Ihre Rechte</h3>
               <p>
                 Ihnen stehen die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
-                Datenübertragbarkeit und Widerspruch zu. Eine Einwilligung können Sie jederzeit widerrufen. Wenn Sie
+                Datenübertragbarkeit und Widerspruch zu (Art. 15 bis 21 DSGVO). Wenden Sie sich dafür einfach an{" "}
+                {mail}. Eine Einwilligung können Sie jederzeit widerrufen. Wenn Sie
                 meinen, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei
                 der{" "}
                 <a href="https://www.dsb.gv.at" target="_blank" rel="noreferrer" className="text-link">
@@ -131,6 +144,7 @@ export default function ImpressumPage() {
 
             <Block id="impressum" title="Impressum">
               <p>Angaben gemäß § 5 E-Commerce-Gesetz und Offenlegung gemäß § 25 Mediengesetz</p>
+              <p>Medieninhaberin und Diensteanbieterin:</p>
               <address className="not-italic">
                 {practice.name}
                 <br />
@@ -154,14 +168,23 @@ export default function ImpressumPage() {
                 Aufsichtsbehörde: Bundesministerium für Arbeit, Soziales, Gesundheit, Pflege und Konsumentenschutz.
               </p>
               <p>
-                Berufsrechtliche Vorschriften: Psychotherapiegesetz 2024, abrufbar im{" "}
-                <a href="https://www.ris.bka.gv.at" target="_blank" rel="noreferrer" className="text-link">
+                Berufsrechtliche Vorschriften: Psychotherapiegesetz 2024 (PThG 2024), abrufbar im{" "}
+                <a
+                  href="https://www.ris.bka.gv.at/eli/bgbl/I/2024/49"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-link"
+                >
                   Rechtsinformationssystem des Bundes
                 </a>
                 .
               </p>
               <p>Mitgliedschaften: {about.memberships.join(", ")}.</p>
-              <p>Grundlegende Richtung: Information über die psychotherapeutische Praxis und ihr Angebot.</p>
+              <p>Unternehmensgegenstand: Psychotherapie in freier Praxis.</p>
+              <p>
+                Leistungen der Psychotherapie sind von der Umsatzsteuer befreit (§ 6 Abs. 1 Z 19 UStG), daher besteht
+                keine UID-Nummer.
+              </p>
 
               <h3>Haftungsausschluss</h3>
               <p>
@@ -176,6 +199,7 @@ export default function ImpressumPage() {
                 Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen
                 Zustimmung. Stimmungsbilder: Artem Beliaikin und Daniel Sessler auf Unsplash.
               </p>
+              <p className="text-[0.9375rem] text-stein">Stand: Oktober 2026</p>
             </Block>
           </div>
         </div>
