@@ -100,7 +100,8 @@ export default function ImpressumPage() {
 
               <h3>Hosting und Server-Protokolle</h3>
               <p>
-                Diese Website wird bei Vercel Inc. (USA) betrieben. Beim Aufruf der Seiten verarbeitet der Server
+                Diese Website wird bei Vercel Inc. (USA) betrieben. Die Formulare werden in einem Rechenzentrum in
+                Frankfurt am Main verarbeitet. Beim Aufruf der Seiten verarbeitet der Server
                 technisch notwendige Daten wie IP-Adresse, Zeitpunkt und aufgerufene Seite, um die Website sicher
                 auszuliefern (Art. 6 Abs. 1 lit. f DSGVO). Diese Protokolle werden nach kurzer Zeit automatisch
                 gelöscht. Die Übermittlung in die USA stützt sich auf die Zertifizierung von Vercel nach dem EU-US
