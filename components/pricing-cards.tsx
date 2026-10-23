@@ -28,7 +28,7 @@ export function PricingCards() {
                   ) : null}
                 </div>
                 {offer.price ? (
-                  <p className="mt-8 font-serif text-[clamp(2rem,3.2vw,2.6rem)] font-light leading-none tracking-[-0.01em] text-moos-tief">
+                  <p className="mt-6 font-serif text-[1.35rem] leading-none text-anthrazit">
                     {offer.price}
                   </p>
                 ) : null}

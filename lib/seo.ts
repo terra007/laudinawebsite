@@ -54,7 +54,7 @@ export function structuredData(portrait: string | null) {
         ...(portrait ? { image: `${practice.url}${portrait}` } : {}),
         founder: { "@id": person },
         currenciesAccepted: "EUR",
-        priceRange: "€ 130–260",
+        priceRange: "€ 140–270",
         address: {
           "@type": "PostalAddress",
           streetAddress: location.lines[0],
