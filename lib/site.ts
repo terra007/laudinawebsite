@@ -223,7 +223,7 @@ export type Offer = { id: string; title: string; subtitle?: string; duration?: s
 
 export const pricing: Offer[] = [
   { id: "einzel", title: "Einzeltherapie", duration: "50 Minuten", price: "€ 140,–" },
-  { id: "paar", title: "Paartherapie", duration: "100 Minuten", price: "€ 270,–" },
+  { id: "paar", title: "Paartherapie", duration: "100 Minuten", price: "€ 280,–" },
   { id: "gruppe", title: "Gruppe", subtitle: "Hypnosystemische Aufstellung" },
 ];
 
